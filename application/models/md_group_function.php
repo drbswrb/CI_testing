@@ -1,0 +1,74 @@
+<?php
+//the function takes in user article parameters and updates it to the 'article' table in the database, i.e. adds the article in database
+class Md_group_function extends CI_Model {
+
+	public function __construct()
+	{
+		// Call the Model constructor
+		parent::__construct();
+	}
+	
+	//model to show group in user homepage
+	public function getAllGroups($userid)
+	{
+		$this->load->database();
+		$query=$this->db->query("select * from group_owner where group_id in (select group_id from group_member where username_group='{$userid}')");
+		return $query->result();
+		
+	}
+	
+	//model to get notification at user page
+	public function getNotifications($user_id,$group_id)
+	{
+		$this->load->database();
+		$query=$this->db->query("select content from member_group_notification where username='{$user_id}' and group_id=$group_id");
+		return $query->result();
+	}
+	//model to post notification to all member of group
+	public function postNotification($username,$group_id,$content)
+	{
+		$this->load->database();
+		
+		
+		mysql_query("insert into group_notification(group_id,notification,posted_by_username,posted_date) values($group_id,'{$content}','{$username}',now())");
+		$query=$this->db->query("select username_group from group_member where group_id=$group_id");
+		$result= $query->result();
+		foreach($result as $row)
+		{
+			
+			$res=mysql_query("insert into member_group_notification (username,group_id,content,date_time) values('{$username}',$group_id,'{$content}',now())");
+			
+		}
+		return $res;
+			
+		
+	}
+	
+	//model to show all notifications ,members and discussion of group on show_group_details page
+	
+	public function getGroupMember($group_id,$group_name)
+	{
+		$this->load->database();
+		$query=$this->db->query("select * from group_member where group_id=$group_id");
+		return $query->result();
+		
+	}
+	
+	public function getGroupNotification($group_id,$group_name)
+	{
+		$this->load->database();
+		$query=$this->db->query("select * from group_notification where group_id=$group_id order by posted_date desc");
+		return $query->result();
+		
+	}
+	
+	public function getGroupDiscussion($group_id,$group_name)
+	{
+		$this->load->database();
+		$query=$this->db->query("select * from group_discussion where group_id=$group_id order by posted_date_time desc");
+		return $query->result();
+		
+	}
+	///////////////////////////////////////end of show_group_details page/////////////////////////////////////////////////////////////////////////
+	
+}
