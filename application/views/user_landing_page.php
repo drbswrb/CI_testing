@@ -11,6 +11,9 @@
     <!-- Loading Flat UI -->
     <link href="<?php echo base_url('Assets/css/flat-ui.css');?>" rel="stylesheet">
      <link href="<?php echo base_url('Assets/css/accordian.css');?>" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url('Assets/css/fontello.css');?>">
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url('Assets/css/dzyngiri.css');?>">
+   
     <link rel="shortcut icon" href="<?php echo base_url('Assets/images/favicon.ico');?>">
     <link href="<?php echo base_url()?>Assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 	<style>
@@ -69,6 +72,140 @@
       background-color:rgb(149, 149, 201); }
     .btn.btn-primary3:active, .btn.btn-primary.active {
       background-color: #16a085; }
+      
+      .icon {
+	float: right;
+	margin-right: 20px;
+	font-size: 16px;
+	}
+/*
+ * Dropdown menu
+ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+  margin-left:20px;
+}
+
+.dropdown-text::-moz-selection,
+.dropdown-toggle::-moz-selection { background: transparent; color: inherit; }
+.dropdown-text::selection,
+.dropdown-toggle::selection { background: transparent; color: inherit; }
+
+.dropdown-text {
+  cursor: pointer;
+  position: absolute;
+  text-indent: 10px;
+  line-height: 38px;
+  background-color: #4f4f4b;
+  width: 100%;
+}
+
+.dropdown-text,
+.dropdown-content a {
+  color: #fff;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+}
+
+.dropdown-toggle {
+  font-size: 0;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 1px;
+  background: transparent;
+  text-indent: -10px;
+  height: 34px;
+  width: 100%;
+}
+
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+.dropdown-content {
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+  list-style-type: none;
+  position: absolute;
+  top: 32px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility:hidden;
+  text-indent: 10px;
+  line-height:38px;
+  background-color: #df826b;
+  width: 300px;
+  
+}
+
+.dropdown-content:after {
+	position: absolute;
+	right: 14px;
+	top: -9px;
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 8px 9px 8px;
+	border-color: transparent transparent #df826b transparent;
+}
+
+.dropdown-content li {
+	border-bottom:4px solid #4f4f4b;
+	overflow:hidden;
+	height:30px;
+	}
+.dropdown-content li:last-child {
+		border-bottom:none;
+		}
+.dropdown-content a {
+  display: block;
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.dropdown-content a:hover {
+  background: #4f4f4b;
+  padding-left:5px;
+  height:30px;
+}
+
+
+.dropdown-toggle:hover ~ .dropdown-text,
+.dropdown-toggle:focus ~ .dropdown-text {
+  background-color: #4f4f4b;
+}
+
+.dropdown-toggle:focus ~ .dropdown-text {
+  border-color: #c5c5c5;
+  z-index: 2;
+}
+
+.dropdown-toggle:focus ~ .dropdown-text:after {
+  border-width: 0 4px 5px 4px;
+  border-color: transparent transparent #555 transparent;
+}
+
+.dropdown-content:hover,
+.dropdown-toggle:focus ~ .dropdown-content {
+  opacity: 1;
+  visibility:visible;
+  top: 55px;
+}
 	  
 	  
     </style>
@@ -108,6 +245,8 @@ $(function ()  {
 	 $(window).load(function(){
             $("#today_event_window").mCustomScrollbar();
 	    $("#tomorrow_event_window").mCustomScrollbar();
+	    
+	   
         });
 }
 );
@@ -121,6 +260,7 @@ $(document).ready(function() {
 	var title = $("#event_title_today").val();
 	var location=$("#event_location_today").val();
 	var time=$("#event_time_today").val();
+
 	//alert("hello");
     $.ajax(
      {
@@ -212,9 +352,8 @@ $(document).ready(function() {
 		slideTrigger: 'mouseover',
 		slideWidthClosed: 160
 	});
-
-  
-
+	
+	
 });
   
   
@@ -222,11 +361,7 @@ $(document).ready(function() {
 
 <script>
 
-$(document).ready(function(e) {
-        $("#course_detail").click(function(e) {
-                alert('clicked');
-        });
-});
+
 </script>
   <body style="overflow-x:hidden;background-color:#F1F2F2;">
 	<?php 
@@ -303,46 +438,46 @@ $(document).ready(function(e) {
 				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#66669A;">
 					<img src="<?php echo base_url('Assets/images/academics.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
                                         <p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Academics</span></a></p>
-					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Course Details</span></a></p>
-					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/teacher_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Teacher Reviews</span></a></p>
+					<p style="left: 320px; opacity: 0;top:100px;" ><a href="<?php echo base_url();?>index.php/articles/index/academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Course Details</span></a></p>
+					<p  style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/teacher_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Teacher Reviews</span></a></p>
                                         <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/scholarships" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Scholarships</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/projects" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Projects</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">rticles</span></p>
-                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">16</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
+                                         <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/projects" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Projects</span></a></p>
+                                          <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">articles</span></p>
+                                       <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">16</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
 				</li>
-				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#CD6667;">
+				<li class="slide_opened" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#CD6667;">
 					<img src="<?php echo base_url('Assets/images/activity.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-                                        <p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Activities</span></a></p>
-					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/boards_and_clubs" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Boards and Clubs</span></a></p>
-					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/college_fests" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">College Fests</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/politics_and_pors" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Politics and PORs</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/current_rankings" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Current rankings</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
+                                        <p  style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Activities</span></a></p>
+					<p  style="left: 320px; opacity: 0;top:100px;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Boards and Clubs</span></p>
+					<p  style="left: 320px; opacity: 0;top:80px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">College Fests</span></p>
+                                        <p style="left: 320px; opacity: 0;top:125px;width:200px"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Politics and PORs</span></p>
+                                        <p style="left: 320px; opacity: 0;top:167px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Current rankings</span></p>
+                                        <p style="left: 320px; opacity: 0;top:190px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;"></span></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br/><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
                                         <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">16</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
 				</li>
 				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 480px;background-color:#1BBC9B">
-				<img src="<?php echo base_url('Assets/images/training.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-					<p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Training</span></a></p>
-					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/training/where_to_apply" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Where To Apply ?</span></a></p>
-					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/training/how_to_apply" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">How to  Apply ?</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/training/internship_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Internship Reviews</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/training/general_rules" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">General Rules</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">32</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
-                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">25</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
+					<img src="<?php echo base_url('Assets/images/training.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
+                                        <p  style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Training</span></a></p>
+					<p  style="left: 320px; opacity: 0;width:200px;top:100px;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Where To Apply ?</span></p>
+					<p  style="left: 320px; opacity: 0;top:80px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">How to  Apply ?</span></p>
+                                        <p style="left: 320px; opacity: 0;top:125px;width:200px"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Internship Reviews</span></p>
+                                        <p style="left: 320px; opacity: 0;top:167px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">General Rules</span></p>
+                                        <p style="left: 320px; opacity: 0;top:190px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;"></span></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">32</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Articles</span></p>
+                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">25</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Questions</span></p>
 				</li>
                                 <li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 480px;background-color:#669ACC">
 					<img src="<?php echo base_url('Assets/images/placements.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-					<p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Placement</span></a></p>
-					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/previous_statistics" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Previous Statistics</span></a></p>
-					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/latest_updates" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Latest Updates</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/preparation_fundae" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Preparation fundae</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:235px;width:200px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/visiting_companies" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Visiting Companies</span></a></p>
-                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">84</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
-                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">65</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
+                                        <p  style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Placement</span></a></p>
+					<p  style="left: 320px; opacity: 0;width:200px;top:100px;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Previous Statistics</span></p>
+					<p  style="left: 320px; opacity: 0;top:80px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Latest Updates</span></p>
+                                        <p style="left: 320px; opacity: 0;top:125px;width:200px"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Preparation fundae</span></p>
+                                        <p style="left: 320px; opacity: 0;top:167px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Visiting Companies</span></p>
+                                        <p style="left: 320px; opacity: 0;top:190px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;"></span></p>
+					                    <p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">84</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Articles</span></p>
+                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">65</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Questions</span></p>
 				</li>
                                
                                 
@@ -409,7 +544,7 @@ $(document).ready(function(e) {
         	
                 <div class="span2"  style="height:200px;width:150px;">
                   	  <img src="<?php echo base_url('Assets/images/writepost.png');?>" class="btnSocial" alt="" style="margin-left:20px;width:110px;height:110px;margin-bottom:15px;margin-top:15px;" />
-                          <a class="btn btn-primary1 btn-large btn-block" href="#">Write post</a>
+                          <a href="#writePost" data-toggle="modal" class="btn btn-primary1 btn-large btn-block" href="#">Write post</a>
 
                 </div>
                 <div class="span2"  style="height:200px;width:150px;">
@@ -420,7 +555,7 @@ $(document).ready(function(e) {
                 
                 <div class="span2"  style="height:200px;width:150px;margin-top:30px;">
                   	  <img src="<?php echo base_url('Assets/images/askquestion.png');?>" class="btnSocial" alt="" style="margin-left:20px;width:110px;height:110px;margin-bottom:15px;margin-top:15px;"/>
-                          <a class="btn btn-primary2 btn-large btn-block" href="#">Ask questions</a>
+                        <a href="#writeQuestion" data-toggle="modal"  class="btn btn-primary2 btn-large btn-block" href="#">Ask questions</a>
 
                 </div>
                 <div class="span2"  style="height:200px;margin-top:30px;width:150px;">
@@ -499,6 +634,7 @@ $(document).ready(function(e) {
 
 </div>
 </div>
+  
                                  
                 <!--end of first div for showing "Today"-->
                 
@@ -585,6 +721,7 @@ $(document).ready(function(e) {
                  <img src="<?php echo base_url(); ?>Assets/images/facebook-icon.png" style="width:30px;height:30px;"/>
                  <img src="<?php echo base_url(); ?>Assets/images/twitter-icon.png" style="width:30px;height:30px;margin-left:0px;"/>
                 </div>
+                
         
         </div>
   
@@ -615,22 +752,147 @@ $(document).ready(function(e) {
     <script src="<?php echo base_url(); ?>Assets/js/bootstrap-carousel.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/bootstrap-typeahead.js"></script>
       <script src="<?php echo base_url(); ?>Assets/js/jquery.slides.min.js"></script>
+      <script>
+      $(function(){
+	      /*
+	    $("#li-acad").click(function(e) {
+               $(".dropdown-text").html("Academics");
+        });
+	      */
+	      $("#ul-category li a").click(function(e) {
+		      	var value=$(this).html();
+			$("#category-text").attr("name",$(this).attr("name"));
+			//alert($("#category-text").attr("name"));
+			$("#category-text").html(value);
+			var param=$("#category-text").attr("name");
+			//alert(param);
+			
+			$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_getsub_category/index",
+      				cache:false,
+      				data:"category_id="+param,
+      				success: function(html){
+					$("#ul-topic").html(" ");
+					$("#ul-topic").append(html);
+					
+					}
+				
+				});
+				
+			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
+        });
+	
+	$(document).on("click", ".try", function(){
+		$("#topic-text").html($(this).html());
+	});
+	      });
+      </script>
       
+      <!-- code for adding new article popup-->
       
-       <div id="signUp" class="modal hide fade" style="width:600px;height:380px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div id="writePost" class="modal hide fade" style="width:600px;height:500px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<header style="border-bottom:1px solid #eeeeee">
-   		<span style="padding:20px;color:#D2B293;font-size:14px;">Notify Every Member !</span>
+   		<span style="padding:20px;color:#D2B293;font-size:14px;">Add new Post !</span>
     		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position:relative; right:5px;">×</button>
     	</header>	
-        <form action="<?php echo base_url();?>index.php/show_group_notification/sendNotification/<?php echo base64_encode($username);?>/1" method="post">
+        <span style="margin-left:30px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Category :</span>
+        <br>
+      	<div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" name="1" id="category-text">Choose category</div>
+  			<ul class="dropdown-content" id="ul-category"  style="z-index:3;">
+    				<li ><a href="#" name="1"  id="c1" style="text-decoration:none;">Academics </a></li>
+   				 <li ><a href="#" name="2" id="c2" style="text-decoration:none;">Activities </a></li>
+   				 <li><a href="#" name="3" id-"c3" style="text-decoration:none;">Training</a></li>
+   				<li><a href="#"  name="4"id="c4" style="text-decoration:none;">Placement </a></li>
+   			</ul>
+		</div>
+                
+         <br>
+         <div class="span5" style="margin-top:50px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Topic :</span>
+          </div>
+          <br/>
+          <div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" id="topic-text">Choose Topic</div>
+  			<ul class="dropdown-content" id="ul-topic" style="z-index:3">
+                        	 
+
+   			</ul>
+		</div>
+                
+        <br>
+          <div class="span5" style="margin-top:50px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Title :</span>
+          </div>
+          <input type="text" style="width:400px;height:20px;margin-left:20px;"/>
+          
+          <br>
+           <div class="span5" style="margin-top:10px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Content :</span>
+          </div>
+          <textarea style="width:400px;height:60px;margin-left:20px;"></textarea>
+
+	<br>
+        <input type="submit" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
+       
 	
         
-        <textarea placeholder="Enter notification content" name="article_content"style="margin-left:20px;margin-top:20px;width:400px;height:200px;" ></textarea>					
-                   
-             <br>
-             <input type="submit" class="btn btn-warning" value="Submit" style="margin-left:20px;"/>      
+      					
+         
     	</form>
  </div>
+ <!-- code for adding new question popup-->
+ 
+ <div id="writeQuestion" class="modal hide fade" style="width:600px;height:500px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<header style="border-bottom:1px solid #eeeeee">
+   		<span style="padding:20px;color:#D2B293;font-size:14px;">Add new Question !</span>
+    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position:relative; right:5px;">×</button>
+    	</header>	
+        <span style="margin-left:30px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Category :</span>
+        <br>
+      	<div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" name="1" id="category-text">Choose category</div>
+  			<ul class="dropdown-content" id="ul-category"  style="z-index:3;">
+    				<li ><a href="#" name="1"  id="c1" style="text-decoration:none;">Academics </a></li>
+   				 <li ><a href="#" name="2" id="c2" style="text-decoration:none;">Activities </a></li>
+   				 <li><a href="#" name="3" id-"c3" style="text-decoration:none;">Training</a></li>
+   				<li><a href="#"  name="4"id="c4" style="text-decoration:none;">Placement </a></li>
+   			</ul>
+		</div>
+                
+         <br>
+         <div class="span5" style="margin-top:50px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Topic :</span>
+          </div>
+          <br/>
+          <div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" id="topic-text">Choose Topic</div>
+  			<ul class="dropdown-content" id="ul-topic" style="z-index:3">
+                        	 
+
+   			</ul>
+		</div>
+                
+        <br>
+          
+          
+           <div class="span5" style="margin-top:60px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Question :</span>
+          </div>
+          <textarea style="width:400px;height:60px;margin-left:20px;"></textarea>
+
+	<br>
+        <input type="submit" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
+       
+	
+        
+      					
+         
+    	</form>
+ </div>
+ 
+ <!-- code for pop up scheduling event -->
 
 <div id="addCalendarEventToday" class="modal hide fade" style="width:600px;height:320px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <header style="border-bottom:1px solid #eeeeee">

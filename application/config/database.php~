@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';    
-$db['default']['password'] = '';                       //needs to be configures
+$db['default']['password'] = 'tarang1tan2';                       //needs to be configures
 $db['default']['database'] = 'iitd';  
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
