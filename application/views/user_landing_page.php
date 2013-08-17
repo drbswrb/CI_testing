@@ -254,7 +254,6 @@ $(function ()  {
 <script>
 $(document).ready(function() {
 	 
-     
 	 $("#add_event_today").click(function(e) {
 	var username = "<?php echo $username; ?>";
 	var title = $("#event_title_today").val();
@@ -438,46 +437,46 @@ $(document).ready(function() {
 				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#66669A;">
 					<img src="<?php echo base_url('Assets/images/academics.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
                                         <p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Academics</span></a></p>
-					<p style="left: 320px; opacity: 0;top:100px;" ><a href="<?php echo base_url();?>index.php/articles/index/academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Course Details</span></a></p>
-					<p  style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/teacher_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Teacher Reviews</span></a></p>
+					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Course Details</span></a></p>
+					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/teacher_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Teacher Reviews</span></a></p>
                                         <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/scholarships" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Scholarships</span></a></p>
-                                         <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/projects" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Projects</span></a></p>
-                                          <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">articles</span></p>
-                                       <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">16</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
+                                        <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/projects" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Projects</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">rticles</span></p>
+                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">16</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
 				</li>
-				<li class="slide_opened" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#CD6667;">
+				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#CD6667;">
 					<img src="<?php echo base_url('Assets/images/activity.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-                                        <p  style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Activities</span></a></p>
-					<p  style="left: 320px; opacity: 0;top:100px;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Boards and Clubs</span></p>
-					<p  style="left: 320px; opacity: 0;top:80px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">College Fests</span></p>
-                                        <p style="left: 320px; opacity: 0;top:125px;width:200px"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Politics and PORs</span></p>
-                                        <p style="left: 320px; opacity: 0;top:167px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Current rankings</span></p>
-                                        <p style="left: 320px; opacity: 0;top:190px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;"></span></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br/><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
+                                        <p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Activities</span></a></p>
+					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/boards_and_clubs" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Boards and Clubs</span></a></p>
+					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/college_fests" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">College Fests</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/politics_and_pors" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Politics and PORs</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/activities/current_rankings" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Current rankings</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">24</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
                                         <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">16</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
 				</li>
 				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 480px;background-color:#1BBC9B">
-					<img src="<?php echo base_url('Assets/images/training.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-                                        <p  style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Training</span></a></p>
-					<p  style="left: 320px; opacity: 0;width:200px;top:100px;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Where To Apply ?</span></p>
-					<p  style="left: 320px; opacity: 0;top:80px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">How to  Apply ?</span></p>
-                                        <p style="left: 320px; opacity: 0;top:125px;width:200px"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Internship Reviews</span></p>
-                                        <p style="left: 320px; opacity: 0;top:167px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">General Rules</span></p>
-                                        <p style="left: 320px; opacity: 0;top:190px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;"></span></p>
-					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">32</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Articles</span></p>
-                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">25</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Questions</span></p>
+				<img src="<?php echo base_url('Assets/images/training.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
+					<p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Training</span></a></p>
+					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/training/where_to_apply" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Where To Apply ?</span></a></p>
+					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/training/how_to_apply" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">How to  Apply ?</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/training/internship_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Internship Reviews</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:235px;"><a href="<?php echo base_url();?>index.php/articles/index/training/general_rules" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">General Rules</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">32</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
+                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">25</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
 				</li>
                                 <li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 480px;background-color:#669ACC">
 					<img src="<?php echo base_url('Assets/images/placements.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-                                        <p  style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Placement</span></a></p>
-					<p  style="left: 320px; opacity: 0;width:200px;top:100px;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Previous Statistics</span></p>
-					<p  style="left: 320px; opacity: 0;top:80px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Latest Updates</span></p>
-                                        <p style="left: 320px; opacity: 0;top:125px;width:200px"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Preparation fundae</span></p>
-                                        <p style="left: 320px; opacity: 0;top:167px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;">Visiting Companies</span></p>
-                                        <p style="left: 320px; opacity: 0;top:190px;width:200px;"><span style="font-family:'calibri';font-size:18px;color:#fff;line-height:150px;"></span></p>
-					                    <p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">84</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Articles</span></p>
-                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">65</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-20px;">Questions</span></p>
+					<p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Placement</span></a></p>
+					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/previous_statistics" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Previous Statistics</span></a></p>
+					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/latest_updates" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Latest Updates</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/preparation_fundae" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Preparation fundae</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:235px;width:200px;"><a href="<?php echo base_url();?>index.php/articles/index/placement/visiting_companies" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Visiting Companies</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:280px;width:200px;"><a href="<?php echo base_url();?>academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;"></span></a></p>
+					<p class="uni" style="left:140px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">84</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-15px;">Articles</span></p>
+                                        <p class="uni" style="left:240px;top:420px;opacity:0;"><span style="font-family:calibri;color:#fff;font-size:18px;">65</span><br><span style="font-family:calibri;color:#fff;font-size:15px;margin-left:-19px;">Questions</span></p>
 				</li>
                                
                                 
@@ -758,9 +757,9 @@ $(document).ready(function() {
 	    $("#li-acad").click(function(e) {
                $(".dropdown-text").html("Academics");
         });
-	      */
+	      */var value,subcat;
 	      $("#ul-category li a").click(function(e) {
-		      	var value=$(this).html();
+		      	value=$(this).html();
 			$("#category-text").attr("name",$(this).attr("name"));
 			//alert($("#category-text").attr("name"));
 			$("#category-text").html(value);
@@ -784,8 +783,48 @@ $(document).ready(function() {
         });
 	
 	$(document).on("click", ".try", function(){
+		subcat=$(this).html();
 		$("#topic-text").html($(this).html());
 	});
+	
+	$("#addArticle").click(function(e) {
+			var title = $("#articleTitle").val();		
+			var content = $("#articleContent").val();
+			var article_cat = value;
+			var article_sub_cat = subcat;		
+			$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_insert_article",
+      				cache:false,
+      				data:"content="+content+"&title="+title+"&article_cat="+article_cat+"&article_sub_cat="+article_sub_cat,
+      				success: function(html){
+					alert("Article added successfully");
+					}
+				
+				});
+				
+			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
+        });
+
+	$("#AddQuestion").click(function(e) {
+			var content = $("#questionContent").val();
+			var question_cat = value;
+			var question_sub_cat = subcat;		
+			$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_insert_article",
+      				cache:false,
+      				data:"content="+content+"&question_cat="+question_cat+"&question_sub_cat="+question_sub_cat,
+      				success: function(html){
+					alert("Question added successfully");
+					}
+				
+				});
+				
+			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
+        });
+     
+	
 	      });
       </script>
       
@@ -803,7 +842,7 @@ $(document).ready(function() {
   			<ul class="dropdown-content" id="ul-category"  style="z-index:3;">
     				<li ><a href="#" name="1"  id="c1" style="text-decoration:none;">Academics </a></li>
    				 <li ><a href="#" name="2" id="c2" style="text-decoration:none;">Activities </a></li>
-   				 <li><a href="#" name="3" id-"c3" style="text-decoration:none;">Training</a></li>
+   				 <li><a href="#" name="3" id="c3" style="text-decoration:none;">Training</a></li>
    				<li><a href="#"  name="4"id="c4" style="text-decoration:none;">Placement </a></li>
    			</ul>
 		</div>
@@ -823,18 +862,18 @@ $(document).ready(function() {
                 
         <br>
           <div class="span5" style="margin-top:50px;">
-          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Title :</span>
+          	<span  style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Title :</span>
           </div>
-          <input type="text" style="width:400px;height:20px;margin-left:20px;"/>
+          <input id="articleTitle" type="text" style="width:400px;height:20px;margin-left:20px;"/>
           
           <br>
            <div class="span5" style="margin-top:10px;">
-          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Content :</span>
+          	<span  style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Content :</span>
           </div>
-          <textarea style="width:400px;height:60px;margin-left:20px;"></textarea>
+          <textarea id="articleContent" style="width:400px;height:60px;margin-left:20px;"></textarea>
 
 	<br>
-        <input type="submit" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
+        <input type="submit" id="addArticle" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
        
 	
         
@@ -856,7 +895,7 @@ $(document).ready(function() {
   			<ul class="dropdown-content" id="ul-category"  style="z-index:3;">
     				<li ><a href="#" name="1"  id="c1" style="text-decoration:none;">Academics </a></li>
    				 <li ><a href="#" name="2" id="c2" style="text-decoration:none;">Activities </a></li>
-   				 <li><a href="#" name="3" id-"c3" style="text-decoration:none;">Training</a></li>
+   				 <li><a href="#" name="3" id="c3" style="text-decoration:none;">Training</a></li>
    				<li><a href="#"  name="4"id="c4" style="text-decoration:none;">Placement </a></li>
    			</ul>
 		</div>
@@ -880,15 +919,12 @@ $(document).ready(function() {
            <div class="span5" style="margin-top:60px;">
           	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Question :</span>
           </div>
-          <textarea style="width:400px;height:60px;margin-left:20px;"></textarea>
+          <textarea id="questionContent" style="width:400px;height:60px;margin-left:20px;"></textarea>
 
 	<br>
-        <input type="submit" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
+        <input id="AddQuestion" type="submit" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
        
-	
-        
-      					
-         
+      
     	</form>
  </div>
  

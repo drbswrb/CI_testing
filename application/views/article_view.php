@@ -115,31 +115,47 @@ $(document).ready(function(e) {
                 <div class="span2" style="height:80px;background-color:#fff;margin-left:14px;margin-top:0px;">
                 	<div class="span2" style="height:60px;margin-top:5px;margin-left:10px;">
                         	<span style="font-family:'Segoe UI';font-size:22px;margin-left:20px;">Projects</span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;">24 posts </span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;">32 Questions</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;"><?php $query=mysql_query("select * from article where article_sub_cat='projects'");
+$n=mysql_num_rows($query);
+echo $n ?> Posts </span><br>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;"><?php $query=mysql_query("select * from questions where question_sub_cat='projects'");
+$n=mysql_num_rows($query);
+echo $n ?> Questions </span>
                         </div>
                 </div>
                 
                   <div class="span2" style="height:80px;background-color:#fff;margin-left:14px;margin-top:10px;">
                 	<div class="span2" style="height:60px;margin-top:5px;margin-left:10px;">
                         	<span style="font-family:'Segoe UI';font-size:22px;margin-left:0px;">Scholarships</span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;">24 posts </span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;">32 Questions</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;"><?php $query=mysql_query("select * from article where article_sub_cat='scholarships'");
+$n=mysql_num_rows($query);
+echo $n ?> Posts </span><br>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;"><?php $query=mysql_query("select * from questions where question_sub_cat='scholarships'");
+$n=mysql_num_rows($query);
+echo $n ?> Questions </span>
                         </div>
                 </div>
                 
                   <div class="span2" style="height:80px;background-color:#fff;margin-left:14px;margin-top:10px;">
                 	<div class="span2" style="height:60px;margin-top:5px;margin-left:10px;">
                         	<span style="font-family:'Segoe UI';font-size:22px;margin-left:-5px;">Course Detail</span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;">24 posts </span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;">32 Questions</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;"><?php $query=mysql_query("select * from article where article_sub_cat='course_detail'");
+$n=mysql_num_rows($query);
+echo $n ?> Posts </span><br>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;"><?php $query=mysql_query("select * from questions where question_sub_cat='course_detail'");
+$n=mysql_num_rows($query);
+echo $n ?> Questions </span>
                         </div>
                 </div>
                  <div class="span2" style="height:80px;background-color:#fff;margin-left:14px;margin-top:10px;">
                 	<div class="span2" style="height:60px;margin-top:5px;margin-left:10px;">
                         	<span style="font-family:'Segoe UI';font-size:20px;margin-left:-7px;">Teacher Review</span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;">24 posts </span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;">32 Questions</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:35px;"><?php $query=mysql_query("select * from article where article_sub_cat='teacher_reviews'");
+$n=mysql_num_rows($query);
+echo $n ?> Posts </span><br>
+                                <span style="font-family:'Segoe UI';font-size:14px;margin-left:20px;"><?php $query=mysql_query("select * from questions where question_sub_cat='teacher_reviews'");
+$n=mysql_num_rows($query);
+echo $n ?> Questions </span>
                         </div>
                 </div>
                          
@@ -269,9 +285,11 @@ $(document).ready(function(e) {
 				<span  style="text-decoration:none;margin-left:80px;color:#960;"><a href="<?php echo base_url();?>index.php/get_full_article/index/<?php echo $row->article_id ?>" style="text-decoration:none;">Read  More</a></span>
 
                                 <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
-                                <span style="font-family:'Segoe UI';font-size:14px;color:#66669A">32  Votes</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;color:#66669A"><?php echo $row->likes; ?>  Votes</span>
                                  <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:14px; height:14px;margin-left:100px;margin-top:-5px;"/>
-                                <span style="font-family:'Segoe UI';font-size:14px;color:#CD6869">16  Comments</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;color:#CD6869"><?php $query=mysql_query("select * from comment_article where article_id=$row->article_id");
+$n=mysql_num_rows($query);
+ echo $n; ?>  Comments</span>
                                 
                                 <div class="span10" style="height:2px;background-color:#D5D5D5;margin-top:10px;"></div>
                         
