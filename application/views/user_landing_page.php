@@ -757,6 +757,7 @@ $(document).ready(function() {
 	    $("#li-acad").click(function(e) {
                $(".dropdown-text").html("Academics");
         });
+	
 	      */var value,subcat;
 	      $("#ul-category li a").click(function(e) {
 		      	value=$(this).html();
@@ -779,9 +780,28 @@ $(document).ready(function() {
 				
 				});
 				
-			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
+			
         });
-	
+	$("#ul-question-category li a").click(function(e) {
+                                $("#question-category-text").html($(this).html());
+				$("#question-category-text").attr("name",$(this).attr("name"));
+				var param=$("#question-category-text").attr("name");
+				//alert(param);
+				$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_getsub_category/index",
+      				cache:false,
+      				data:"category_id="+param,
+      				success: function(html){
+					$("#ul-question-topic").html(" ");
+					$("#ul-question-topic").append(html);
+					
+					}
+				
+				});
+					
+                        });
+			
 	$(document).on("click", ".try", function(){
 		subcat=$(this).html();
 		$("#topic-text").html($(this).html());
@@ -803,23 +823,11 @@ $(document).ready(function() {
 				
 				});
 				
-			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
+			
         });
 
 	$("#AddQuestion").click(function(e) {
-			var content = $("#questionContent").val();
-			var question_cat = value;
-			var question_sub_cat = subcat;		
-			$.ajax({
-				 type:"POST",
-      				url:"<?php echo base_url()?>index.php/ajax_insert_article",
-      				cache:false,
-      				data:"content="+content+"&question_cat="+question_cat+"&question_sub_cat="+question_sub_cat,
-      				success: function(html){
-					alert("Question added successfully");
-					}
-				
-				});
+			
 				
 			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
         });
@@ -891,12 +899,12 @@ $(document).ready(function() {
         <span style="margin-left:30px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Category :</span>
         <br>
       	<div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
-  		<div class="dropdown-text" name="1" id="category-text">Choose category</div>
-  			<ul class="dropdown-content" id="ul-category"  style="z-index:3;">
-    				<li ><a href="#" name="1"  id="c1" style="text-decoration:none;">Academics </a></li>
-   				 <li ><a href="#" name="2" id="c2" style="text-decoration:none;">Activities </a></li>
-   				 <li><a href="#" name="3" id="c3" style="text-decoration:none;">Training</a></li>
-   				<li><a href="#"  name="4"id="c4" style="text-decoration:none;">Placement </a></li>
+  		<div class="dropdown-text" name="1"  id="question-category-text">Choose category</div>
+  			<ul class="dropdown-content" id="ul-question-category"  style="z-index:3;">
+    				<li ><a href="#" name="1"  id="q1" style="text-decoration:none;">Academics </a></li>
+   				 <li ><a href="#" name="2" id="q2" style="text-decoration:none;">Activities </a></li>
+   				 <li><a href="#" name="3" id="q3" style="text-decoration:none;">Training</a></li>
+   				<li><a href="#"  name="4"id="q4" style="text-decoration:none;">Placement </a></li>
    			</ul>
 		</div>
                 
@@ -906,8 +914,8 @@ $(document).ready(function() {
           </div>
           <br/>
           <div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
-  		<div class="dropdown-text" id="topic-text">Choose Topic</div>
-  			<ul class="dropdown-content" id="ul-topic" style="z-index:3">
+  		<div class="dropdown-text" id="question-topic-text">Choose Topic</div>
+  			<ul class="dropdown-content" id="ul-question-topic" style="z-index:3">
                         	 
 
    			</ul>
