@@ -758,7 +758,7 @@ $(document).ready(function() {
                $(".dropdown-text").html("Academics");
         });
 	
-	      */var value,subcat;
+	      */var value,subcat,value1;
 	      $("#ul-category li a").click(function(e) {
 		      	value=$(this).html();
 			$("#category-text").attr("name",$(this).attr("name"));
@@ -783,6 +783,7 @@ $(document).ready(function() {
 			
         });
 	$("#ul-question-category li a").click(function(e) {
+				value1 = $(this).html();
                                 $("#question-category-text").html($(this).html());
 				$("#question-category-text").attr("name",$(this).attr("name"));
 				var param=$("#question-category-text").attr("name");
@@ -805,6 +806,9 @@ $(document).ready(function() {
 	$(document).on("click", ".try", function(){
 		subcat=$(this).html();
 		$("#topic-text").html($(this).html());
+		$("#question-topic-text").html($(this).html());
+		
+		
 	});
 	
 	$("#addArticle").click(function(e) {
@@ -828,7 +832,21 @@ $(document).ready(function() {
 
 	$("#AddQuestion").click(function(e) {
 			
-				
+		var content = $("#questionContent").val();
+     	var question_cat = value1;
+      	var question_sub_cat = subcat;  
+	alert(value1);
+	alert(subcat);  
+     $.ajax({
+         type:"POST",
+              url:"<?php echo base_url()?>index.php/ajax_insert_question",
+              cache:false,
+              data:"content="+content+"&question_cat="+question_cat+"&question_sub_cat="+question_sub_cat,
+              success: function(html){
+          alert("Question added successfully");
+          }
+        
+        });		
 			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
         });
      

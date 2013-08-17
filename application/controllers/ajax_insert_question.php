@@ -15,8 +15,8 @@ class Ajax_insert_question extends CI_Controller {
 		$query=mysql_query("select * from user_detail where email='{$posted_by}'");
 		$row=mysql_fetch_array($query);
 		$name=$row['first_name'];
-		$question_cat = $_POST['article_cat'];
-		$question_sub_cat = $_POST['article_sub_cat'];		
+		$question_cat = $_POST['question_cat'];
+		$question_sub_cat = $_POST['question_sub_cat'];		
 		$date = date('Y-m-d H:i:s');
 		$query = mysql_query("insert into questions (question_cat, question_sub_cat, question, email, posted_by, number_of_likes, posted_date) values ('{$question_cat}','{$question_sub_cat}','{$content}','{$posted_by}','{$name}',0,'{$date}')");
 		
