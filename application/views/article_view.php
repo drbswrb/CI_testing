@@ -179,7 +179,7 @@ echo $n ?> Questions </span>
                                <div class="span5" style="height:40px;margin-top:15px;margin-left:25px;">
                 			<span style="font-family:'Segoe UI';font-size:28px;color:#fff;">PREVIOUS YEARS PAPERS</span>
                                         <span style="font-family:'Segoe UI';font-size:22px;color:#fff;margin-left:50px;line-height:50px;">39 Posts</span>
-                                         <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - Dates/<span style="color:#19BC9F">Votes</span></span>
+                                         <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Votes</span></span>
                 		</div>
                                  <div class="span1" style="width:85px;height:20px;margin-top:24px;margin-left:5px;">
                 			<span style="font-family:'calibri';font-size:12px;color:#CED2ED;">34 following</span>
@@ -382,5 +382,50 @@ $n=mysql_num_rows($query);
     <script src="<?php echo base_url(); ?>Assets/js/bootstrap-carousel.js"></script>
   <script src="<?php echo base_url(); ?>Assets/js/bootstrap-typeahead.js"></script>
   <script src="<?php echo base_url(); ?>Assets/js/jquery.slides.min.js"></script>
+  <script>
+  	//code for sorting articles by date or votes
+  	$(function(){
+		
+		$("#date").click(function(e) {
+                        $("#date").css({"color":"#36BC9E"});
+			$("#votes").css({"color":"#fff"});
+			
+			
+			 $.ajax(
+    					{
+     						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
+     						 cache:false,
+    						 data:"type=article&order_by=date",
+     						 success: function(html){
+						
+						alert("worked");
+     					 }
+      
+      
+   			 });
+           });//end of date click event
+		
+		
+		$("#votes").click(function(e) {
+                        $("#votes").css({"color":"#36BC9E"});
+			$("#date").css({"color":"#fff"});
+			 $.ajax(
+    					{
+     						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
+     						 cache:false,
+    						 data:"type=article&order_by=votes",
+     						 success: function(html){
+						
+						alert("worked");
+     					 }
+      
+      
+   			 });
+                });//end of votes end function
+	});
+  
+  </script>
       
  </body>
