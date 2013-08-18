@@ -6,8 +6,9 @@ class Ajax_sort_content extends CI_Controller {
 	//$order_by is whether sort by vote or date
 	public function index()
 	{
-		//get all three values
-		//$topic,$type,$order_by
+		$topic = $_POST['topic'];
+		$sorted_by = $_POST['sorted_by'];
+		$type = $_POST['type'];
+		
 	}
 	
-}

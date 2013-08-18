@@ -390,13 +390,13 @@ $n=mysql_num_rows($query);
                         $("#date").css({"color":"#36BC9E"});
 			$("#votes").css({"color":"#fff"});
 			
-			
+			var topic = "<?php echo $topic; ?>";
 			 $.ajax(
     					{
      						 type:"POST",
      						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
      						 cache:false,
-    						 data:"type=article&order_by=date",
+    						 data:"type=article&order_by=date&topic="+topic,
      						 success: function(html){
 						
 						alert("worked");
@@ -410,12 +410,14 @@ $n=mysql_num_rows($query);
 		$("#votes").click(function(e) {
                         $("#votes").css({"color":"#36BC9E"});
 			$("#date").css({"color":"#fff"});
+			var topic = "<?php echo $topic; ?>";
+			 
 			 $.ajax(
     					{
      						 type:"POST",
      						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
      						 cache:false,
-    						 data:"type=article&order_by=votes",
+    						 data:"type=article&order_by=votes&topic="+topic,
      						 success: function(html){
 						
 						alert("worked");

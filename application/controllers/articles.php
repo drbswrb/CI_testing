@@ -12,6 +12,7 @@ class Articles extends CI_Controller
 		$que = $this->md_load_questions->getQuestions();
 		$data['arr']=$dataArr;
 		$data['que'] = $que;
+		$data['topic'] = $sub_category;
 		$this->load->library('session');
 		 if ( $this->session->userdata('login_state') == FALSE ) 
      		 redirect( "/" );
