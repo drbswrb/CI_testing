@@ -188,65 +188,8 @@ echo $n ?> Questions </span>
                                     <div class="span1" style="width:90px;height:20px;background-color:#1BBC9B;margin-top:-25px;margin-left:630px;">
                 			<span style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:10px;">Follow topic</span>
                			 </div>
-			<div class="span11" style="margin-top:32px;margin-left:0px;height:825px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
-			<!--<div class="span11" style="width:800px;height:380px;margin-left:0px;margin-top:10px;">
-			<?php $i=0; ?>
-			<?php foreach($que as $row) {
-			$i++; 
-			$query = mysql_query("select * from answers where question_id = '{$row->question_id}'");
-			$ans = mysql_num_rows($query);
-			?>		
-                	<div class="span6" style="width:800px;height:100px;margin-top:30px;">
-                        	<span style="font-family:'Segoe UI';color:#868686;font-size:18px;"><?php echo $i ?>) <?php echo $row->question ?></span><br>
-                                <span style="font-family:'Segoe UI';font-size:14px;color:#8C8C8C;margin-left:30px;line-height:50px;">Asked By: <?php echo $row->posted_by ?></span>
-                                <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:420px;margin-top:-5px;"/>
-                                <span style="font-family:'Segoe UI';font-size:14px;color:#66669A"><?php echo $row->number_of_likes ?> likes</span>
-                                 <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:14px; height:14px;margin-left:50px;margin-top:-5px;"/>
-                                <span style="font-family:'Segoe UI';font-size:14px;color:#CD6869"><?php echo $ans ?> Answers</span>
-                                
-                                <div class="span9" style="height:2px;background-color:#D5D5D5;margin-top:10px;"></div>
-                        
-                        </div>
-	<?php } ?>
-			</div>             
-                           </div> 
-	<div class="span11" style="margin-top:32px;margin-left:0px;height:400px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;"> -->
-	<div class="span12" id="mini-container" style="height:800px;width:100%;margin-top:0px;margin-left:-20px;"> 
-<!--
-<?php 
-	foreach($arr as $row)
-		{
-?>
- 	<div class="span4" style="min-height:190px;background-color:#fff;margin-top:20px;border-radius:10px;">
-        	<div class="span4" style="height:20px;margin-left:0;margin-top:5px;">
-                	<span style="font-family:Calibri, 'Californian FB';font-size:20px;color:#1ABC9C;margin-left:10px;"> 
-				<?php echo $row->article_name  ?>
-                        </span>
-                </div>
-                
-                <div class="span4" style="min-height:20px;margin-left:2px;;margin-top:8px;">
-                	<span style="font-family:Calibri, 'Californian FB';font-size:16px;color:#333;margin-left:3px;">
-                        <?php $var= $row->article_content;  
-				if(strlen($var)>=170)
-				{
-					$len=rand(60,170);
-					for( $i=0;$i<=$len;$i++)
-					echo $var[$i];
-					
-					echo "...";
-				}
-				else
-					echo $var;
-			?>
-                         
-                        
-                       	<br><br>
-                        <a href="<?php echo base_url();?>index.php/load_full_article/index/" style="text-decoration:none;float:right;margin-right:5px;color:#960;">Read  More</a>
-                        </span>
-                </div>
-
-                   </div> 
-        <?php } ?> !-->
+			<div id="articleContent" class="span11" style="margin-top:32px;margin-left:0px;height:825px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
+			
 <?php 
 	foreach($arr as $row)
 		{
@@ -254,7 +197,7 @@ echo $n ?> Questions </span>
 
 <div class="span11" style="width:800px;height:100px;margin-top:30px;">
 
-                        	<!--<span style="font-family:'Segoe UI';color:#868686;font-size:18px;margin-left:30px;"><?php echo $row->article_content ?></span><br> -->
+                        	
 				<span style="font-family:Calibri, 'Californian FB';font-size:16px;color:#333;margin-left:30px;">
 
                         <?php $var= $row->article_content;  
@@ -276,10 +219,7 @@ echo $n ?> Questions </span>
 					echo $var;
 
 			?>
-                         
-
-                        
-                       	<br><br>
+			<br><br>
                         
                         </span>
                                 <span style="font-family:'Segoe UI';font-size:14px;color:#8C8C8C;margin-left:30px;line-height:50px;">By: <?php echo $row->posted_by ?> </span>
@@ -296,10 +236,11 @@ $n=mysql_num_rows($query);
                         
                         </div>
 <?php } ?>
-        </div>
+        
 	</div>
 	</div>
 	</div>
+	
         <!-- div for right side dock and navigation-->
             <div class="span1" style="height:250px;background-color:#E2E3DD;margin-top:20px;width:75px;">
          	<img src="<?php echo base_url()?>Assets/images/writepost.png" />
@@ -396,11 +337,11 @@ $n=mysql_num_rows($query);
      						 type:"POST",
      						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
      						 cache:false,
-    						 data:"type=article&order_by=date&topic="+topic,
+    						 data:"type=article&order_by=date_posted&topic="+topic,
      						 success: function(html){
-						
-						alert("worked");
-     					 }
+						 $("#articleContent").html(html);
+												 
+					 }
       
       
    			 });
@@ -417,11 +358,10 @@ $n=mysql_num_rows($query);
      						 type:"POST",
      						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
      						 cache:false,
-    						 data:"type=article&order_by=votes&topic="+topic,
+    						 data:"type=article&order_by=likes&topic="+topic,
      						 success: function(html){
-						
-						alert("worked");
-     					 }
+						 $("#articleContent").html(html);
+					 }
       
       
    			 });
