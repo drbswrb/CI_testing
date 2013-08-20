@@ -162,8 +162,8 @@ $(document).ready(function(e) {
                                <div class="span5" style="height:40px;margin-top:15px;margin-left:25px;">
                 			<span style="font-family:'Segoe UI';font-size:28px;color:#fff;">PREVIOUS YEARS PAPERS</span>
                                         <span style="font-family:'Segoe UI';font-size:22px;color:#fff;margin-left:50px;line-height:50px;">39 Posts</span>
-                                         <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - Dates/<span style="color:#19BC9F">Votes</span></span>
-                		</div>
+                                         <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Votes</span></span>
+				</div>
                                  <div class="span1" style="width:85px;height:20px;margin-top:24px;margin-left:5px;">
                 			<span style="font-family:'Open Sans';font-size:12px;color:#CED2ED;">34 following</span>
                			 </div>
@@ -171,7 +171,7 @@ $(document).ready(function(e) {
                                     <div class="span1" style="width:90px;height:20px;background-color:#1BBC9B;margin-top:-25px;margin-left:630px;">
                 			<span style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:10px;">Follow topic</span>
                			 </div>
-			<div class="span11" style="margin-top:32px;margin-left:0px;height:605px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
+			<div id="questionContent" class="span11" style="margin-top:32px;margin-left:0px;height:605px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
 			<div class="span11" style="width:800px;height:380px;margin-left:0px;margin-top:10px;">
 			<?php $i=0; ?>
 			<?php foreach($que as $row) {
@@ -257,5 +257,48 @@ $(document).ready(function(e) {
     <script src="<?php echo base_url(); ?>Assets/js/bootstrap-carousel.js"></script>
   <script src="<?php echo base_url(); ?>Assets/js/bootstrap-typeahead.js"></script>
   <script src="<?php echo base_url(); ?>Assets/js/jquery.slides.min.js"></script>
+   <script>
+  	//code for sorting questions by date or votes
+  	$(function(){
+		
+		$("#date").click(function(e) {
+			
+                        $("#date").css({"color":"#36BC9E"});
+			$("#votes").css({"color":"#fff"});
+			 $.ajax(
+    					{
+     						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
+     						 cache:false,
+    						 data:"type=question&order_by=posted_date",
+     						 success: function(html){
+						 $("#questionContent").html(html);
+												 
+					 }
       
+      
+   			 });
+           });//end of date click event
+		
+		
+		$("#votes").click(function(e) {
+                        $("#votes").css({"color":"#36BC9E"});
+			$("#date").css({"color":"#fff"});
+			 
+			 $.ajax(
+    					{
+     						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_sort_content",
+     						 cache:false,
+    						 data:"type=question&order_by=number_of_likes",
+     						 success: function(html){
+						 $("#questionContent").html(html);
+					 }
+      
+      
+   			 });
+                });//end of votes end function
+	});
+  
+  </script>   
  </body>
