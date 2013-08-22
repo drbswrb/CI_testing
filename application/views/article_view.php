@@ -110,7 +110,7 @@ $(document).ready(function(e) {
                          <div class="span3" style="height:450px;background-color:#669ACC;margin-left:15px;width:180px;margin-top:10px;">
                          		<div class="span3" style="height:80px;margin-left:20px;margin-top:10px;">
                 	<span style="font-family:'Segoe UI';font-size:22px;color:#fff;">Other topics</span><br>
-                        <span style="font-family:'Segoe UI';font-size:22px;color:#fff;">in Academics</span>
+                        <span style="font-family:'Segoe UI';font-size:22px;color:#fff;">in <?php echo strtoupper($category);?></span>
                 </div>
                 
                 <div class="span2" style="height:80px;background-color:#fff;margin-left:14px;margin-top:0px;">
@@ -177,9 +177,12 @@ echo $n ?> Questions </span>
                 			<span style="font-family:'Segoe UI';font-size:15px;color:#fff;margin-left:0px;">Kumar</span>
                		       </div>
                                <div class="span5" style="height:40px;margin-top:15px;margin-left:25px;">
-                			<span style="font-family:'Segoe UI';font-size:28px;color:#fff;">PREVIOUS YEARS PAPERS</span>
-                                        <span style="font-family:'Segoe UI';font-size:22px;color:#fff;margin-left:50px;line-height:50px;">39 Posts</span>
-                                         <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Votes</span></span>
+                			<span style="font-family:'Segoe UI';font-size:28px;color:#fff;"><?php $upper_topic=strtoupper($topic);$topics=explode("_",$upper_topic);
+						foreach($topics as $t)echo $t." ";
+					?></span>
+                                        <br>
+                                        <span style="font-family:'Segoe UI';font-size:22px;color:#fff;margin-left:10px;line-height:50px;">39 Posts</span>
+                                         <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Likes</span></span>
                 		</div>
                                  <div class="span1" style="width:85px;height:20px;margin-top:24px;margin-left:5px;">
                 			<span style="font-family:'calibri';font-size:12px;color:#CED2ED;">34 following</span>
@@ -195,16 +198,21 @@ echo $n ?> Questions </span>
 		{
 ?>
 
-<div class="span11" style="width:800px;height:100px;margin-top:30px;">
+<div class="span11" style="width:800px;height:100px;margin-top:30px;margin-bottom:40px;">
 
-                        	
+                        	<span style="font-family:Calibri, 'Californian FB';font-size:18px;color:#333;margin-left:30px;color:#66669A;">
+                                	<?php echo $row->article_name;?>
+                                
+                                </span>
+                                <br>
 				<span style="font-family:Calibri, 'Californian FB';font-size:16px;color:#333;margin-left:30px;">
 
                         <?php $var= $row->article_content;  
-				if(strlen($var)>=100)
+				if(strlen($var)>=130)
 				{
 
-					$len=100;
+					$len=130;
+					
 
 					for( $i=0;$i<=$len;$i++)
 
@@ -213,12 +221,15 @@ echo $n ?> Questions </span>
 					
 
 					echo "...";
+				?>
+                                <?php
 				}
-
 				else
 					echo $var;
 
 			?>
+                        
+                        <span  style="text-decoration:none;margin-left:5px;color:#960;"><a href="<?php echo base_url();?>index.php/get_full_article/index/<?php echo $row->article_id ?>" style="text-decoration:none;font-size:14px;">Read  More</a></span>
 			<br><br>
                         
                         </span>
@@ -226,7 +237,7 @@ echo $n ?> Questions </span>
 				<span  style="text-decoration:none;margin-left:80px;color:#960;"><a href="<?php echo base_url();?>index.php/get_full_article/index/<?php echo $row->article_id ?>" style="text-decoration:none;">Read  More</a></span>
 
                                 <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
-                                <span style="font-family:'Segoe UI';font-size:14px;color:#66669A"><?php echo $row->likes; ?>  Votes</span>
+                                <span style="font-family:'Segoe UI';font-size:14px;color:#66669A"><?php echo $row->likes; ?> Likes</span>
                                  <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:14px; height:14px;margin-left:100px;margin-top:-5px;"/>
                                 <span style="font-family:'Segoe UI';font-size:14px;color:#CD6869"><?php $query=mysql_query("select * from comment_article where article_id=$row->article_id");
 $n=mysql_num_rows($query);

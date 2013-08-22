@@ -198,11 +198,11 @@ $(document).ready(function(e) {
               <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'Open Sans';color:#669ACC"><?php echo $i ?> comments</span>
 
            </div>
-
+	<!-- in next pahse-
            <div class="span2" style="height:25px;background-color:#1ABC9C;margin-top:8px;">
               <span style="font-family:'Open Sans';font-size:14px;color:#fff;margin-left:15px;line-height:25px;">Follow Question</span>
            </div>
-		
+	-->		
         </div>
 	
 	<div id="Like">
@@ -249,8 +249,10 @@ $(document).ready(function(e) {
 		<span style="margin-left:10px;"><?php echo $row->comment_text ?> </span>
                   </div>
                   <div class="span7" style="height:20px;margin-left:0px;width:580px;">
-                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629">29 Votes</span>
-                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629;margin-left:100px">10 min ago</span>
+                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629"><?php echo $row->likes;?> Likes</span>
+                        <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
+                       <span class="like_comment" value="<?php echo $row->comment_id;?>" style="font-family:'Open Sans';font-size:14px;color:#66669A;cursor:pointer">Like</span>
+                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629;margin-left:100px"><?php echo $row->posted_at;?></span>
                   </div>
               </div>
 		<div class="span6" style="margin-left:0;margin-top:0px;background-color:#FFF;height:40px;width:700px;margin-top:20px;">
@@ -316,4 +318,32 @@ $(document).ready(function(e) {
     <script src="<?php echo base_url(); ?>Assets/js/bootstrap-typeahead.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/jquery.slides.min.js"></script>
   </body>
+  
+  <script>
+  
+  $(function(){
+	$(".like_comment").click(function(e) {
+                var comment_id=$(this).attr("value");
+		var span_name=$(this);
+		$.ajax({
+			
+						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_like_comment/index",
+     						 cache:false,
+    						 data:"comment_id="+comment_id,
+     						 success: function(html)
+						 {
+						 	alert(html);
+							$(span_name).html("Dislike");
+							//use same logic which is use to like article. 
+												 
+					 	}	
+					 
+			
+			
+			});//end of ajax call
+        });	  
+});//end of window load
+  
+  </script>
 
