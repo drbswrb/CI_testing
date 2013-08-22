@@ -82,8 +82,8 @@
                         	<span style="font-family:'Segoe UI';font-size:15px;color:#fff"><?php echo $group_name ?></span>
                         </div>
                 </div>
-                
-                <div class="span2" style="height:50px;border:3px solid #666A98;width:110px;background-color:#fff;margin-top:-10px;border-radius:3px;margin-left:250px;">
+               <div class="span5"  style="margin-left:0;height:70px;background-color:#1BBC9B;width:550px;margin-left:260px;margin-top: -15px;">
+                <div class="span2" style="height:50px;width:110px;background-color:#fff;margin-top:10px;border-radius:3px;margin-left:20px;">
                 	<div class="span1" style="height:20px;width:35px;margin-top:5px;margin-left:35px;">
                         	<div class="span1" style="height:25px;width:30px;margin-left:4px;margin-top:0;">
                         		<img src="<?php echo base_url()?>Assets/images/Add_members.png" style="height:25px;width:30px;"/>
@@ -95,7 +95,7 @@
                                 </a>
                         </div>
                 </div>
-                <div class="span2" style="height:50px;border:3px solid #666A98;width:110px;background-color:#fff;margin-top:-10px;border-radius:3px;margin-left:30px;">
+                <div class="span2" style="height:50px;width:110px;background-color:#fff;margin-top:10px;border-radius:3px;margin-left:20px;">
                 	<div class="span1" style="height:20px;width:30px;margin-top:5px;margin-left:35px;">
                         	<div class="span1" style="height:25px;width:30px;margin-left:5px;margin-top:0;">
                         		<img src="<?php echo base_url()?>Assets/images/View_members.png" style="height:25px;width:30px;"/>
@@ -107,7 +107,7 @@
                                 </a>
                         </div>
                 </div>
-                <div class="span2" style="height:50px;border:3px solid #666A98;width:110px;background-color:#fff;margin-top:-10px;border-radius:3px;margin-left:30px;">
+                <div class="span2" style="height:50px;width:110px;background-color:#fff;margin-top:10px;border-radius:3px;margin-left:20px;">
                 	<div class="span1" style="height:20px;width:30px;margin-top:5px;margin-left:35px;">
                         	<div class="span1" style="height:25px;width:30px;margin-left:4px;margin-top:0;">
                         		<img src="<?php echo base_url()?>Assets/images/join_group_blue.png" style="height:25px;width:30px;"/>
@@ -121,7 +121,7 @@
                                  
                         </div>	
                 </div>
-                <div class="span2" style="height:50px;border:3px solid #666A98;width:110px;background-color:#fff;margin-top:-10px;border-radius:3px;margin-left:30px;">
+                <div class="span2" style="height:50px;width:110px;background-color:#fff;margin-top:10px;border-radius:3px;margin-left:20px;">
                 	<div class="span1" style="height:20px;width:30px;margin-top:5px;margin-left:35px;">
                         	<div class="span1" style="height:25px;width:30px;margin-left:4px;margin-top:0;">
                         		<img src="<?php echo base_url()?>Assets/images/leave_grooup.png" style="height:25px;width:30px;"/>
@@ -137,10 +137,10 @@
 				
                         </div>
                 </div>
-               
+               </div>
                 
         </div>
-        <div class="span5"  style="height:500px;background-color:#fff;margin-left:70px;margin-bottom:30px;">
+        <div class="span5"  style="height:845px;background-color:#fff;margin-left:70px;margin-bottom:30px;">
       		  <!--blue border-->
         	<div class="span5"  style="margin-left:0;height:50px;background-color:#669ACC;width:380px;margin-right:-5px;">
                 	<span style="font-family:'Segoe UI';font-size:21px;color:#fff;margin-left:130px;line-height:50px;">Group Alerts</span>
@@ -150,7 +150,7 @@
                 	<input type="text" style="height:25px;width:270px;margin-top:0px;margin-left:0;border:0px solid #fff" placeholder="Type in and Press enter to send message" id="notification_content"/>
                         <button class="btn btn-mini " id="post_notification">Send</button>
                 </div>
-                 <div class="span5" id="alert_window" style="height:450px;background-color:#fff;margin-left:0;">
+                 <div class="span5" id="alert_window" style="height:700px;background-color:#fff;margin-left:0;">
          	 <!-- end blue border-->  
                  <!-- start of repetaing div,don't forget to alternate background color-->
                     <?php $i=0;foreach($group_notification as $row){
@@ -179,7 +179,7 @@
                  </div>
         </div>
         </div>
-         <div class="span7" style="height:580px;background-color:#fff;width:550px;margin-left:30px;">
+         <div class="span7" style="height:845px;background-color:#fff;width:550px;margin-left:30px;">
          	  <!--blue border-->
         	<div class="span7" style="margin-left:0;height:50px;background-color:#66669A;width:550px;border-radius:5px;">
                 	<span style="font-family:'Segoe UI';font-size:21px;color:#fff;margin-left:200px;line-height:50px;">Group Discussions</span>
@@ -190,7 +190,7 @@
         	
                
          	 <!-- end blue border-->      
-                 <div class="span7" id="discussion_window" style="height:450px;background-color:#fff;margin-left:5px;margin-bottom:30px;">
+                 <div class="span7" id="discussion_window" style="height:700px;background-color:#fff;margin-left:5px;margin-bottom:30px;">
                  <!-- start of repeating dv,don't forget to alternate css-->
                  <?php foreach( $group_discussion as $row){
 		$email=$row->posted_by_username;
@@ -222,7 +222,7 @@
                         <button class="btn btn-mini" id="post_discussion">Send</button>
      </div>
 </div>
-         <div class="span1" style="height:250px;background-color:#E2E3DD;margin-top:-85px;width:75px;">
+         <div class="span1" style="height:250px;background-color:#E2E3DD;margin-top:-85px;width:75px;margin-left:15px">
          	<img src="<?php echo base_url()?>Assets/images/writepost.png" />
                 <img src="<?php echo base_url()?>Assets/images/addtopic.png" style="margin-top:-15px;"/>
                 <img src="<?php echo base_url()?>Assets/images/addevent.png" style="margin-top:-15px;"/>
@@ -232,7 +232,7 @@
 
          </div>
          
-         <div class="span1" style="height:300px;background-color:#E2E3DD;margin-top:190px;width:75px;margin-left:-70px;margin-bottom:10px;">
+         <div class="span1" style="height:670px;background-color:#E2E3DD;width:75px;margin-top:175px;margin-left:-70px;">
          	<div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
                 	<img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
                 </div>
@@ -249,6 +249,30 @@
                  
                  <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
                  	<img src="<?php echo base_url()?>Assets/images/lostandfound_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/Blindchat_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/calendar_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/confessions_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/compliments_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/complaints_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/outsidecampus_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
                  </div>
 
          </div>
