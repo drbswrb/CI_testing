@@ -97,13 +97,14 @@ $(document).ready(function(e) {
         <img src="<?php echo base_url('Assets/images/205409_466035890074606_183932173_n.jpg');?>"  style="width:70px;height:70px;margin-left:1055px;margin-top:-40px;"/>  	
         </div>
         
-        <div class="span3" style="height:600px;margin-left:80px;margin-top:20px;">
+        <div class="span3" style="height:620px;margin-left:80px;margin-top:20px;">
         		<div class="span2" style="height:30px;background-color:#039;margin-left:15px;width:180px;background-color:#19BC9F;">
-                        	<span style="font-family:'Open Sans';color:#fff;font-size:20px;margin-left:35px;">SWITCH TO</span>
+                        	<span style="font-family:'calibri';color:#fff;font-size:20px;margin-left:35px;">SWITCH TO</span>
                         </div>
                         <a href="<?php echo base_url();?>index.php/academics/course_details">
-                        <div class="span2" style="height:200px;background-color:#CD6667;margin-left:15px;width:180px;margin-top:5px;">
-                        	<span style="color:#fff;font-family:Calibri,'Californian FB';font-size:24px;">Articles!</span>
+                        <div class="span2" style="height:280px;background-color:#CD6667;margin-left:15px;width:180px;margin-top:5px;">
+                        	<center><span style="color:#fff;font-family:Calibri;font-size:24px;">Articles!</span></center>
+							<center><img src="<?php echo base_url('Assets/images/article.png');?>"/ style="width:133px;height:233px;margin-top:10px;"></center>
                         </div>
                         </a>
                          <div class="span3" style="height:450px;background-color:#669ACC;margin-left:15px;width:180px;margin-top:10px;">
@@ -147,7 +148,7 @@ $(document).ready(function(e) {
                         
         </div><!-- end of right div -->
         <!--div for middle section-->
-        <div class="span10" style="height:705px;background-color:#fff;margin-top:20px;margin-left:-15px;width:750px;">
+        <div class="span10" style="height:925px;background-color:#fff;margin-top:20px;margin-left:-15px;width:750px;">
         		<div class="span11" style="height:100px;background-color:#66669A;width:750px;margin-left:0">
                         	<div class="span1" style="height:30px;margin-top:20px;margin-left:35px;">
                 			<span style="font-family:'Segoe UI';font-size:20px;color:#fff">Added</span><br>
@@ -165,13 +166,13 @@ $(document).ready(function(e) {
                                          <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Votes</span></span>
 				</div>
                                  <div class="span1" style="width:85px;height:20px;margin-top:24px;margin-left:5px;">
-                			<span style="font-family:'Open Sans';font-size:12px;color:#CED2ED;">34 following</span>
+                			<span style="font-family:'calibri';font-size:12px;color:#CED2ED;">34 following</span>
                			 </div>
                                 
                                     <div class="span1" style="width:90px;height:20px;background-color:#1BBC9B;margin-top:-25px;margin-left:630px;">
                 			<span style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:10px;">Follow topic</span>
                			 </div>
-			<div id="questionContent" class="span11" style="margin-top:32px;margin-left:0px;height:605px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
+			<div id="questionContent" class="span11" style="margin-top:32px;margin-left:0px;height:825px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
 			<div class="span11" style="width:800px;height:380px;margin-left:0px;margin-top:10px;">
 			<?php $i=0; ?>
 			<?php foreach($que as $row) {
@@ -208,7 +209,7 @@ $(document).ready(function(e) {
 
          </div>
         <!-- div for widjets-->
-          <div class="span1" style="height:350px;background-color:#E2E3DD;width:75px;margin-top:275px;margin-left:-75px;">
+          <div class="span1" style="height:670px;background-color:#E2E3DD;width:75px;margin-top:275px;margin-left:-75px;">
          	<div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
                 	<img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
                 </div>
@@ -225,6 +226,30 @@ $(document).ready(function(e) {
                  
                  <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
                  	<img src="<?php echo base_url()?>Assets/images/lostandfound_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/Blindchat_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/calendar_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/confessions_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/compliments_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/complaints_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/outsidecampus_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
                  </div>
 
          </div>
