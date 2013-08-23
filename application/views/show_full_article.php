@@ -54,9 +54,9 @@ $(document).ready(function(e) {
    			cache: false,
 			success:function(html)
    		{		
+			alert(html);			
 			$("#commentBlock").html(html);
 			$("#progressbar_image").css({"display":"none"});
-			
 			$("#comment").val('');   		
 		}// end of success
                 });
@@ -98,6 +98,34 @@ $(document).ready(function(e) {
 		}// end of success
                 });
 		});
+		$(".like_comment").click(function(e) {
+		
+                var comment_id=$(this).attr("value");
+		var status=$(this).html();
+		var span_name=$(this);
+		var no_of_likes =$(".no_of_likes_"+comment_id);
+		var article_id = '<?php echo $art_id; ?>';
+		$.ajax({
+			
+						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_like_comment/index",
+     						 cache:false,
+    						 data:"comment_id="+comment_id+"&article_id="+article_id+"&status="+status,
+     						 success: function(html)
+						 {
+							if(status == "Like")
+							$(span_name).html("Dislike");
+							else
+							$(span_name).html("Like");
+							$(no_of_likes).html(html);
+												 
+					 	}	
+					 
+			
+			
+			});//end of ajax call
+							        
+	});
 
 
 });
@@ -249,7 +277,7 @@ $(document).ready(function(e) {
 		<span style="margin-left:10px;"><?php echo $row->comment_text ?> </span>
                   </div>
                   <div class="span7" style="height:20px;margin-left:0px;width:580px;">
-                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629"><?php echo $row->likes;?> Likes</span>
+                      <span class="no_of_likes_<?php echo $row->comment_id;?>" style="font-family:'Open Sans';font-size:14px;color:#D0757629"><?php echo $row->likes;?> Likes</span>
                         <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
                        <span class="like_comment" value="<?php echo $row->comment_id;?>" style="font-family:'Open Sans';font-size:14px;color:#66669A;cursor:pointer">Like</span>
                       <span style="font-family:'Open Sans';font-size:14px;color:#D0757629;margin-left:100px"><?php echo $row->posted_at;?></span>
@@ -322,27 +350,7 @@ $(document).ready(function(e) {
   <script>
   
   $(function(){
-	$(".like_comment").click(function(e) {
-                var comment_id=$(this).attr("value");
-		var span_name=$(this);
-		$.ajax({
-			
-						 type:"POST",
-     						 url:"<?php echo base_url()?>index.php/ajax_like_comment/index",
-     						 cache:false,
-    						 data:"comment_id="+comment_id,
-     						 success: function(html)
-						 {
-						 	alert(html);
-							$(span_name).html("Dislike");
-							//use same logic which is use to like article. 
-												 
-					 	}	
-					 
-			
-			
-			});//end of ajax call
-        });	  
+		  
 });//end of window load
   
   </script>
