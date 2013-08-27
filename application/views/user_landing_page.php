@@ -386,7 +386,7 @@ $(document).ready(function() {
 	?>
   	<div class="span10" style="height:50px;width:100%;margin-top:5px;margin-left:0;">
         	<div class="span2" style="margin-top:5px;margin-left:80px;">
-                	<span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span>
+                	<a href="<?php echo base_url()?>/index.php" style="text-decoration:none"><span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span></a>
                 </div>
                 
                  <div class="span3" style="margin-left:140px;margin-top:16px;">
@@ -436,7 +436,7 @@ $(document).ready(function() {
                 	<ul style="overflow: hidden; position: relative;" id="accordion2">
 				<li class="" style="position: absolute; top: 0px; width: 420px; height: 160px; left: 0px;background-color:#66669A;">
 					<img src="<?php echo base_url('Assets/images/academics.png');?>" style="position:absolute;margin-left:10px;top:110px;width:100px;height:150px"/>
-                                        <p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Academics</span></a></p>
+                                        <p style="left: 320px; opacity: 0;top:40px;" ><a href="<?php echo base_url(); ?>index.php/categories" style="text-decoration:none;"><span style="font-family:calibri;font-size:38px;color:#fff;">Academics</span></a></p>
 					<p style="left: 320px; opacity: 0;top:100px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/course_detail" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Course Details</span></a></p>
 					<p style="left: 320px; opacity: 0;top:145px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/teacher_reviews" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Teacher Reviews</span></a></p>
                                         <p style="left: 320px; opacity: 0;top:190px;"><a href="<?php echo base_url();?>index.php/articles/index/academics/scholarships" style="text-decoration:none;"><span style="font-family:'calibri';font-size:18px;color:#fff;">Scholarships</span></a></p>

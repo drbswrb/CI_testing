@@ -30,4 +30,14 @@ class Md_load_article extends CI_Model {
 		
 	}
 	
+	public function getFollow($user_id,$subcategory)
+	{
+		$this->load->database();
+		$query="select * from follow_topic_list where topic = '{$subcategory}'  and user_id='{$user_id}'";
+		$res=mysql_query($query);
+		
+		return mysql_num_rows($res);
+		
+	}
+	
 }

@@ -5,15 +5,19 @@
 class Articles extends CI_Controller
 {
 	public function index($category,$sub_category) {
+		$this->load->library('session');
+		$user= $this->session->userdata('username');
 		$this->load->helper('url');		
 		$this->load->model('md_load_article');
 		$this->load->model('md_load_questions');
 		$dataArr =$this->md_load_article->getArticle($category,$sub_category);
-		$que = $this->md_load_questions->getQuestions();
+		//$que = $this->md_load_questions->getQuestions();
+		$is_following=$this->md_load_article->getFollow($user,$sub_category);
 		$data['arr']=$dataArr;
-		$data['que'] = $que;
+		//$data['que'] = $que;
 		$data['topic'] = $sub_category;
 		$data['category']=$category;
+		$data['is_following']=$is_following;
 		$this->load->library('session');
 		 if ( $this->session->userdata('login_state') == FALSE ) 
      		 redirect( "/" );

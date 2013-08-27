@@ -53,7 +53,7 @@ $(document).ready(function(e) {
 <body style="background-color:#F0F2F1">
 <div class="span9" style="height:50px;width:100%;margin-top:5px;margin-left:0;">
         	<div class="span2" style="margin-top:5px;margin-left:80px;">
-                	<span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span>
+                	<a href="<?php echo base_url()?>/index.php" style="text-decoration:none"><span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span></a>
                 </div>
                 
                  <div class="span3" style="margin-left:140px;margin-top:16px;">
@@ -185,11 +185,18 @@ echo $n ?> Questions </span>
                                          <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Likes</span></span>
                 		</div>
                                  <div class="span1" style="width:85px;height:20px;margin-top:24px;margin-left:5px;">
-                			<span style="font-family:'calibri';font-size:12px;color:#CED2ED;">34 following</span>
+                			<span style="font-family:'calibri';font-size:12px;color:#CED2ED;"><?php echo $is_following;?> following</span>
                			 </div>
                                 
-                                    <div class="span1" style="width:90px;height:20px;background-color:#1BBC9B;margin-top:-25px;margin-left:630px;">
-                			<span style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:10px;">Follow topic</span>
+                                    <div class="span1" style="width:90px;height:20px;background-color:#1BBC9B;margin-top:-25px;margin-left:630px;cursor:pointer">
+                                    <?php if ($is_following==0){?>
+                			<div id="follow_topic"  style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:10px;display:block">Follow topic</div>
+                                        <div id="unfollow_topic"  style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:15px;display:none">Unfollow</div>
+                                        
+                                      <?php } else {?>
+                                      	<div id="follow_topic"  style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:10px;display:none">Follow topic</div>
+                                      	<div id="unfollow_topic"  style="font-family:'Segoe UI';font-size:14px;color:#fff;margin-left:15px;display:block">Unfollow</div>
+                                        <?php }?>
                			 </div>
 			<div id="articleContent" class="span11" style="margin-top:32px;margin-left:0px;height:825px;width:750px;overflow-y:scroll;overflow-x:hidden;display:block;">            			
 			
@@ -377,6 +384,68 @@ $n=mysql_num_rows($query);
       
    			 });
                 });//end of votes end function
+		
+		//start of follow and un follow
+		
+		$("#follow_topic").click(function(e) {
+                       var topic="<?php echo $topic;?>";
+		       var user="<?php echo $this->session->userdata('username');?>";
+		       
+		        $.ajax(
+    					{
+     						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_follow_topic",
+     						 cache:false,
+    						 data:"user="+user+"&topic="+topic,
+     						 success: function(html){
+							var data=html;
+							if(data==1)
+								{
+									alert("You are now following this topic");	
+									$("#follow_topic").css({"display":"none"});
+									$("#unfollow_topic").css({"display":"block"});
+								}
+							else
+								{
+									alert("An error has occured,please try later");
+								}
+								
+					 }
+      
+      
+   			 });
+                });
+		
+		$("#unfollow_topic").click(function(e) {
+			    var topic="<?php echo $topic;?>";
+		       var user="<?php echo $this->session->userdata('username');?>";
+		       
+		        $.ajax(
+    					{
+     						 type:"POST",
+     						 url:"<?php echo base_url()?>index.php/ajax_follow_topic/remove",
+     						 cache:false,
+    						 data:"user="+user+"&topic="+topic,
+     						 success: function(html){
+							var data=html;
+							if(data==1)
+								{
+									alert("You are now not following this topic");	
+									$("#follow_topic").css({"display":"block"});
+									$("#unfollow_topic").css({"display":"none"});
+								}
+							else
+								{
+									alert("An error has occured,please try later");
+									
+								}
+								
+					 }
+      
+      
+   			 });
+                        
+                });
 	});
   
   </script>

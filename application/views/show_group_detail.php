@@ -34,7 +34,7 @@
 <body style="background-color:#F0F2F1">
 	<div class="span10" style="height:50px;width:100%;margin-top:5px;margin-left:0;">
         	<div class="span2" style="margin-top:5px;margin-left:80px;">
-                	<span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span>
+                	<a href="<?php echo base_url()?>/index.php" style="text-decoration:none"><span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span></a>
                 </div>
                 
                  <div class="span3" style="margin-left:140px;margin-top:16px;">
@@ -234,7 +234,7 @@
          
          <div class="span1" style="height:670px;background-color:#E2E3DD;width:75px;margin-top:175px;margin-left:-70px;">
          	<div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                	<img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                	  <a href="<?php echo base_url()?>/index.php/categories" style="text-decoration:none;" title="Academics" id="acad-tool" data-placement="right" ><img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" /></a>
                 </div>
                  <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
                  	<img src="<?php echo base_url()?>Assets/images/Activities_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
@@ -345,6 +345,8 @@
  
  <script>
 $(document).ready(function(e) {
+	//setting tooltip for all dock elements
+	$("#acad-tool").tooltip(); 
 	
 	//function for updating alert box whenever there is update in database..currently it will check every 2.5 seconds....
 	//functionfor updating group alerts

@@ -133,7 +133,7 @@ $(document).ready(function(e) {
 <body style="background-color:#F0F2F1">
   <div class="span10" style="height:50px;width:100%;margin-top:5px;margin-left:0;">
           <div class="span2" style="margin-top:5px;margin-left:80px;">
-                  <span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span>
+                  <a href="<?php echo base_url()?>/index.php" style="text-decoration:none"><span style="font-family:Calibri, 'Californian FB';color:#1BBC9B;font-size:42px;font-weight:bold;">browseboard</span></a>
           </div>
                 
           <div class="span3" style="margin-left:140px;margin-top:16px;">
