@@ -6,6 +6,7 @@ class Get_full_article extends CI_Controller
 	public function index($article_id) {
 		$this->load->helper('url');		
 		$this->load->library('session');
+		$this->load->database();
 		$this->load->model('md_load_article');
 		 
 		$dataArticle=$this->md_load_article->getDetailArticle($article_id);
@@ -16,8 +17,8 @@ class Get_full_article extends CI_Controller
 		
 		$username=  $this->session->userdata('username');
 		$this->load->model('md_like_article');
+		$this->load->model('md_like_comment');
 		$data['valOfLike']=$this->md_like_article->getStatus($username,$article_id);
-		
 		$numOfLike=$this->md_like_article->showLikes($article_id);
 		foreach($numOfLike as $row)
 		$data['numOfLike']= $row->likes;

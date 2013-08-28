@@ -357,7 +357,19 @@ $(document).ready(function(e) {
                   <div class="span7" style="height:20px;margin-left:0px;width:580px;">
                       <span class="no_of_likes_<?php echo $row->comment_id;?>" style="font-family:'calibri';font-size:14px;color:#D0757629"><?php echo $row->likes;?> Likes</span>
                         <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
-                       <span class="like_comment" value="<?php echo $row->comment_id;?>" style="font-family:'calibri';font-size:14px;color:#66669A;cursor:pointer">Like</span>
+			<?php 
+				$this->load->model('md_like_comment');
+				$username=  $this->session->userdata('username');
+				$result = $this->md_like_comment->likeStatus($username,$row->comment_id);
+				$n=0;				
+				foreach($result as $row1)
+				$n++;
+				
+				
+		if($n==0) { ?>			
+                       <span class="like_comment" value="<?php echo $row->comment_id;?>" style="font-family:'calibri';font-size:14px;color:#66669A;cursor:pointer">Like</span> <?php } 
+		 else { ?>
+			<span class="like_comment" value="<?php echo $row->comment_id;?>" style="font-family:'calibri';font-size:14px;color:#66669A;cursor:pointer">Dislike</span> <?php } ?>
                       <span style="font-family:'calibri';font-size:14px;color:#D0757629;margin-left:100px"><?php echo $row->posted_at;?></span>
                   </div>
               </div>

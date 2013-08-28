@@ -21,6 +21,13 @@ class Md_like_comment extends CI_Model {
 		$query=$this->db->query("select likes from comment_article where comment_id=$comment_id;");
 		return $query->result();
 	}
+
+	public function likeStatus($username,$comment_id)
+	{
+		$this->load->database();
+		$query = $this->db->query("select * from like_comment where username='{$username}' and comment_id=$comment_id");
+		return $query->result();
+	}
 	
 	
 }

@@ -237,14 +237,17 @@
                 	  <a href="<?php echo base_url()?>/index.php/categories" style="text-decoration:none;" title="Academics" id="acad-tool" data-placement="right" ><img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" /></a>
                 </div>
                  <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                 	<img src="<?php echo base_url()?>Assets/images/Activities_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+		<a href="<?php echo base_url()?>/index.php/categories" style="text-decoration:none;" title="Activities" id="activity-tool" data-placement="right" >
+                 	<img src="<?php echo base_url()?>Assets/images/Activities_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" /> </a>
                  </div>
                   <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                 	<img src="<?php echo base_url()?>Assets/images/Placement_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+			<a href="<?php echo base_url()?>/index.php/categories" style="text-decoration:none;" title="Placement" id="placement-tool" data-placement="right" >
+                 	<img src="<?php echo base_url()?>Assets/images/Placement_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" /> </a>
                  </div>
                  
                    <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                 	<img src="<?php echo base_url()?>Assets/images/Training_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+			<a href="<?php echo base_url()?>/index.php/categories" style="text-decoration:none;" title="Training" id="training-tool" data-placement="right" >
+                 	<img src="<?php echo base_url()?>Assets/images/Training_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" /> </a>
                  </div>
                  
                  <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
@@ -347,6 +350,10 @@
 $(document).ready(function(e) {
 	//setting tooltip for all dock elements
 	$("#acad-tool").tooltip(); 
+	$("#activity-tool").tooltip(); 
+	$("#placement-tool").tooltip(); 
+	$("#training-tool").tooltip(); 
+	
 	
 	//function for updating alert box whenever there is update in database..currently it will check every 2.5 seconds....
 	//functionfor updating group alerts
