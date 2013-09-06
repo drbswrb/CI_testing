@@ -37,6 +37,161 @@
     -moz-opacity: 1;
 }
 
+.btn.btn-primary1{
+    background-color: rgb(102, 154, 204); }
+    .btn.btn-primary1:hover, .btn.btn-primary:focus {
+      background-color:rgb(128, 193, 255); }
+    .btn.btn-primary1:active, .btn.btn-primary.active {
+      background-color: #16a085; }
+	  
+	  .btn.btn-primary2{
+    background-color:rgb(205, 102, 103); }
+    .btn.btn-primary2:hover, .btn.btn-primary:focus {
+      background-color:rgb(255, 144, 145); }
+    .btn.btn-primary2:active, .btn.btn-primary.active {
+      background-color: #16a085; }
+	  
+	  .btn.btn-primary3{
+    background-color:rgb(102, 102, 154); }
+    .btn.btn-primary3:hover, .btn.btn-primary:focus {
+      background-color:rgb(149, 149, 201); }
+    .btn.btn-primary3:active, .btn.btn-primary.active {
+      background-color: #16a085; }
+      
+      .icon {
+	float: right;
+	margin-right: 20px;
+	font-size: 16px;
+	}
+/*
+ * Dropdown menu
+ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+  margin-left:20px;
+}
+
+.dropdown-text::-moz-selection,
+.dropdown-toggle::-moz-selection { background: transparent; color: inherit; }
+.dropdown-text::selection,
+.dropdown-toggle::selection { background: transparent; color: inherit; }
+
+.dropdown-text {
+  cursor: pointer;
+  position: absolute;
+  text-indent: 10px;
+  line-height: 38px;
+  background-color: #4f4f4b;
+  width: 100%;
+}
+
+.dropdown-text,
+.dropdown-content a {
+  color: #fff;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+}
+
+.dropdown-toggle {
+  font-size: 0;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 1px;
+  background: transparent;
+  text-indent: -10px;
+  height: 34px;
+  width: 100%;
+}
+
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+.dropdown-content {
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+  list-style-type: none;
+  position: absolute;
+  top: 32px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility:hidden;
+  text-indent: 10px;
+  line-height:38px;
+  background-color: #df826b;
+  width: 300px;
+  
+}
+
+.dropdown-content:after {
+	position: absolute;
+	right: 14px;
+	top: -9px;
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 8px 9px 8px;
+	border-color: transparent transparent #df826b transparent;
+}
+
+.dropdown-content li {
+	border-bottom:4px solid #4f4f4b;
+	overflow:hidden;
+	height:30px;
+	}
+.dropdown-content li:last-child {
+		border-bottom:none;
+		}
+.dropdown-content a {
+  display: block;
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.dropdown-content a:hover {
+  background: #4f4f4b;
+  padding-left:5px;
+  height:30px;
+}
+
+
+.dropdown-toggle:hover ~ .dropdown-text,
+.dropdown-toggle:focus ~ .dropdown-text {
+  background-color: #4f4f4b;
+}
+
+.dropdown-toggle:focus ~ .dropdown-text {
+  border-color: #c5c5c5;
+  z-index: 2;
+}
+
+.dropdown-toggle:focus ~ .dropdown-text:after {
+  border-width: 0 4px 5px 4px;
+  border-color: transparent transparent #555 transparent;
+}
+
+.dropdown-content:hover,
+.dropdown-toggle:focus ~ .dropdown-content {
+  opacity: 1;
+  visibility:visible;
+  top: 55px;
+}
+
 </style>
   </head>
   
@@ -185,7 +340,7 @@ echo $n ?> Questions </span>
                                          <span style="font-family:'Segoe UI';font-size:13px;color:#fff;margin-left:20px;">Sort by - <span id="date" style="cursor:pointer;">Dates</span>/<span id="votes" style="color:#19BC9F;cursor:pointer">Likes</span></span>
                 		</div>
                                  <div class="span1" style="width:85px;height:20px;margin-top:24px;margin-left:5px;">
-                			<span style="font-family:'calibri';font-size:12px;color:#CED2ED;"><?php echo $is_following;?> following</span>
+                			<span id="follow_status" style="font-family:'calibri';font-size:12px;color:#CED2ED;"><?php echo $is_following;?> following</span>
                			 </div>
                                 
                                     <div class="span1" style="width:90px;height:20px;background-color:#1BBC9B;margin-top:-25px;margin-left:630px;cursor:pointer">
@@ -215,10 +370,10 @@ echo $n ?> Questions </span>
 				<span style="font-family:Calibri, 'Californian FB';font-size:16px;color:#333;margin-left:30px;">
 
                         <?php $var= $row->article_content;  
-				if(strlen($var)>=130)
+				if(strlen($var)>=100)
 				{
 
-					$len=130;
+					$len=100;
 					
 
 					for( $i=0;$i<=$len;$i++)
@@ -261,10 +416,12 @@ $n=mysql_num_rows($query);
 	
         <!-- div for right side dock and navigation-->
             <div class="span1" style="height:250px;background-color:#E2E3DD;margin-top:20px;width:75px;">
-         	<img src="<?php echo base_url()?>Assets/images/writepost.png" />
+         	<a href="#writeQuestion" data-toggle="modal" href="#">
+		<img src="<?php echo base_url()?>Assets/images/writepost.png" /> </a>
                 <img src="<?php echo base_url()?>Assets/images/addtopic.png" style="margin-top:-15px;"/>
                 <img src="<?php echo base_url()?>Assets/images/addevent.png" style="margin-top:-15px;"/>
-                <img src="<?php echo base_url()?>Assets/images/askquestion.png" style="margin-top:-15px;"/>
+                <a href="#writeQuestion" data-toggle="modal" href="#">
+<img src="<?php echo base_url()?>Assets/images/askquestion.png" style="margin-top:-15px;"/></a>
 
          </div>
         <!-- div for widjets-->
@@ -314,7 +471,101 @@ $n=mysql_num_rows($query);
          </div>
         
        
-     
+     <div id="writeQuestion" class="modal hide fade" style="width:600px;height:500px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<header style="border-bottom:1px solid #eeeeee">
+   		<span style="padding:20px;color:#D2B293;font-size:14px;">Add new Question !</span>
+    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position:relative; right:5px;">×</button>
+    	</header>	
+        <span style="margin-left:30px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Category :</span>
+        <br>
+      	<div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" name="1"  id="question-category-text">Choose category</div>
+  			<ul class="dropdown-content" id="ul-question-category"  style="z-index:3;">
+    				<li ><a href="#" name="1"  id="q1" style="text-decoration:none;">Academics </a></li>
+   				 <li ><a href="#" name="2" id="q2" style="text-decoration:none;">Activities </a></li>
+   				 <li><a href="#" name="3" id="q3" style="text-decoration:none;">Training</a></li>
+   				<li><a href="#"  name="4"id="q4" style="text-decoration:none;">Placement </a></li>
+   			</ul>
+		</div>
+                
+         <br>
+         <div class="span5" style="margin-top:50px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Topic :</span>
+          </div>
+          <br/>
+          <div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" id="question-topic-text">Choose Topic</div>
+  			<ul class="dropdown-content" id="ul-question-topic" style="z-index:3">
+                        	 
+
+   			</ul>
+		</div>
+                
+        <br>
+          
+          
+           <div class="span5" style="margin-top:60px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Question :</span>
+          </div>
+          <textarea id="questionContent" style="width:400px;height:60px;margin-left:20px;"></textarea>
+
+	<br>
+        <input id="AddQuestion" type="submit" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
+       
+      
+    	</form>
+ </div>
+<div id="writePost" class="modal hide fade" style="width:600px;height:500px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<header style="border-bottom:1px solid #eeeeee">
+   		<span style="padding:20px;color:#D2B293;font-size:14px;">Add new Post !</span>
+    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position:relative; right:5px;">×</button>
+    	</header>	
+        <span style="margin-left:30px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Category :</span>
+        <br>
+      	<div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" name="1" id="category-text">Choose category</div>
+  			<ul class="dropdown-content" id="ul-category"  style="z-index:3;">
+    				<li ><a href="#" name="1"  id="c1" style="text-decoration:none;">Academics </a></li>
+   				 <li ><a href="#" name="2" id="c2" style="text-decoration:none;">Activities </a></li>
+   				 <li><a href="#" name="3" id="c3" style="text-decoration:none;">Training</a></li>
+   				<li><a href="#"  name="4"id="c4" style="text-decoration:none;">Placement </a></li>
+   			</ul>
+		</div>
+                
+         <br>
+         <div class="span5" style="margin-top:50px;">
+          	<span style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Select Topic :</span>
+          </div>
+          <br/>
+          <div class="dropdown"> <span class="dropdown-toggle" tabindex="0"></span>
+  		<div class="dropdown-text" id="topic-text">Choose Topic</div>
+  			<ul class="dropdown-content" id="ul-topic" style="z-index:3">
+                        	 
+
+   			</ul>
+		</div>
+                
+        <br>
+          <div class="span5" style="margin-top:50px;">
+          	<span  style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Title :</span>
+          </div>
+          <input id="articleTitle" type="text" style="width:400px;height:20px;margin-left:20px;"/>
+          
+          <br>
+           <div class="span5" style="margin-top:10px;">
+          	<span  style="margin-left:10px;color:#696969;font-size:18px;font-family:Calibri, 'Californian FB';line-height:30px;"> Enter Content :</span>
+          </div>
+          <textarea id="articleContent" style="width:400px;height:60px;margin-left:20px;"></textarea>
+
+	<br>
+        <input type="submit" id="addArticle" class="btn btn-warning" value="Submit" style="margin-left:30px;"/>
+       
+	
+        
+      					
+         
+    	</form>
+ </div>
      
      
      
@@ -398,12 +649,14 @@ $n=mysql_num_rows($query);
      						 cache:false,
     						 data:"user="+user+"&topic="+topic,
      						 success: function(html){
+				
 							var data=html;
 							if(data==1)
 								{
 									alert("You are now following this topic");	
 									$("#follow_topic").css({"display":"none"});
 									$("#unfollow_topic").css({"display":"block"});
+									$("#follow_status").html(html+ " following");
 								}
 							else
 								{
@@ -418,6 +671,7 @@ $n=mysql_num_rows($query);
 		
 		$("#unfollow_topic").click(function(e) {
 			    var topic="<?php echo $topic;?>";
+				
 		       var user="<?php echo $this->session->userdata('username');?>";
 		       
 		        $.ajax(
@@ -433,6 +687,7 @@ $n=mysql_num_rows($query);
 									alert("You are now not following this topic");	
 									$("#follow_topic").css({"display":"block"});
 									$("#unfollow_topic").css({"display":"none"});
+									$("#follow_status").html(html-1+ " following");
 								}
 							else
 								{
@@ -445,8 +700,131 @@ $n=mysql_num_rows($query);
       
    			 });
                         
-                });
+                
+	      /*
+	    $("#li-acad").click(function(e) {
+               $(".dropdown-text").html("Academics");
+        });
+	
+	      */var value,subcat,value1;
+	      $("#ul-category li a").click(function(e) {
+		      	value=$(this).html();
+			$("#category-text").attr("name",$(this).attr("name"));
+			//alert($("#category-text").attr("name"));
+			$("#category-text").html(value);
+			var param=$("#category-text").attr("name");
+			//alert(param);
+			
+			$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_getsub_category/index",
+      				cache:false,
+      				data:"category_id="+param,
+      				success: function(html){
+					$("#ul-topic").html(" ");
+					$("#ul-topic").append(html);
+					
+					}
+				
+				});
+				
+			
+        });
+	$("#ul-question-category li a").click(function(e) {
+				value1 = $(this).html();
+                                $("#question-category-text").html($(this).html());
+				$("#question-category-text").attr("name",$(this).attr("name"));
+				var param=$("#question-category-text").attr("name");
+				//alert(param);
+				$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_getsub_category/index",
+      				cache:false,
+      				data:"category_id="+param,
+      				success: function(html){
+					$("#ul-question-topic").html(" ");
+					$("#ul-question-topic").append(html);
+					
+					}
+				
+				});
+					
+                        });
+			
+	$(document).on("click", ".try", function(){
+		subcat=$(this).html();
+		$("#topic-text").html($(this).html());
+		$("#question-topic-text").html($(this).html());
+		
+		
 	});
+	
+	$("#addArticle").click(function(e) {
+			var title = $("#articleTitle").val();		
+			var content = $("#articleContent").val();
+			var article_cat = value;
+			var article_sub_cat = subcat;		
+			$.ajax({
+				 type:"POST",
+      				url:"<?php echo base_url()?>index.php/ajax_insert_article",
+      				cache:false,
+      				data:"content="+content+"&title="+title+"&article_cat="+article_cat+"&article_sub_cat="+article_sub_cat,
+      				success: function(html){
+					alert("Article added successfully");
+					}
+				
+				});
+				
+			
+        });
+
+	$("#AddQuestion").click(function(e) {
+			
+		var content = $("#questionContent").val();
+     	var question_cat = value1;
+      	var question_sub_cat = subcat;  
+	alert(value1);
+	alert(subcat);  
+     $.ajax({
+         type:"POST",
+              url:"<?php echo base_url()?>index.php/ajax_insert_question",
+              cache:false,
+              data:"content="+content+"&question_cat="+question_cat+"&question_sub_cat="+question_sub_cat,
+              success: function(html){
+          alert("Question added successfully");
+          }
+        
+        });		
+			
+        });
+     
+	 
+	      
+
+	});
+
+$("#AddQuestion").click(function(e) {
+			
+		var content = $("#questionContent").val();
+     	var question_cat = value1;
+      	var question_sub_cat = subcat;  
+	alert(value1);
+	alert(subcat);  
+     $.ajax({
+         type:"POST",
+              url:"<?php echo base_url()?>index.php/ajax_insert_question",
+              cache:false,
+              data:"content="+content+"&question_cat="+question_cat+"&question_sub_cat="+question_sub_cat,
+              success: function(html){
+          alert("Question added successfully");
+          }
+        
+        });		
+			//$("#ul-topic").append("<li><a href='#'>Demo</a></li>");
+        });
+     
+	
+	      });
   
   </script>
       
