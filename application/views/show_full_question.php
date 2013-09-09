@@ -100,44 +100,122 @@ $(document).ready(function(e) {
       <img src="<?php echo base_url('Assets/images/205409_466035890074606_183932173_n.jpg');?>"  style="width:70px;height:70px;margin-left:1050px;margin-top:-40px;"/>    
       </div>
 
-      <div class="span3" style="height:700px;background-color:#1BBC9B;margin-left:80px;margin-top:20px;">
-		    <div class="span3" style="margin-left0;margin-top:5px;height:40px;">
-          <span style="font-family:Calibri;font-size:24px;color:#fff">More Questions in <br><span style="margin-left:40px">this topic</span></span>
+      <div class="span3" style="height:925px;background-color:#1BBC9B;margin-left:80px;margin-top:20px;">
+		    <div class="span3" style="margin-left:0;margin-top:5px;height:40px;">
+          <center><span style="font-family:Calibri;font-size:24px;color:#fff">More Questions in <br>this topic</span></center>
         </div>
 
-        <div class="span3" style="height:100px;background-color:#fff;margin-left:5px;width:210px;margin-top:30px;">
+        <div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:30px;">
            <div class="span3" style="margin-left:8px;margin-top:10px;">
-              <span style="line-height:10px;font-size:14px;font-family:'Open Sans';color:#7474A3">DBMS 4th semester question avalaible.</span>
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'Open Sans';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'Open Sans';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
 
            </div>
 
         </div>  
+		
+		<div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:20px;">
+           <div class="span3" style="margin-left:8px;margin-top:10px;">
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
+           </div>
+
+           <div class="span3" style="margin-left:0px;margin-top:30px;">
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+
+           </div>
+
+        </div>
+		
+		<div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:20px;">
+           <div class="span3" style="margin-left:8px;margin-top:10px;">
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
+           </div>
+
+           <div class="span3" style="margin-left:0px;margin-top:30px;">
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+
+           </div>
+
+        </div>
+		
+		<div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:20px;">
+           <div class="span3" style="margin-left:8px;margin-top:10px;">
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
+           </div>
+
+           <div class="span3" style="margin-left:0px;margin-top:30px;">
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+
+           </div>
+
+        </div>
+		
+		<div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:20px;">
+           <div class="span3" style="margin-left:8px;margin-top:10px;">
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
+           </div>
+
+           <div class="span3" style="margin-left:0px;margin-top:30px;">
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+
+           </div>
+
+        </div>
+		
+		<div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:20px;">
+           <div class="span3" style="margin-left:8px;margin-top:10px;">
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
+           </div>
+
+           <div class="span3" style="margin-left:0px;margin-top:30px;">
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+
+           </div>
+
+        </div>
+		
+		<div class="span3" style="height:100px;background-color:#fff;margin-left:15px;width:190px;margin-top:20px;">
+           <div class="span3" style="margin-left:8px;margin-top:10px;">
+              <span style="line-height:10px;font-size:14px;font-family:'calibri';color:#7474A3">DBMS 4th semester question <br/>avalaible.</span>
+           </div>
+
+           <div class="span3" style="margin-left:0px;margin-top:30px;">
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+
+           </div>
+
+        </div>
 
 
       </div>
 
-      <div class="span9" style="height:700px;background-color:#FFF;margin-top:20px;margin-left:5px;width:735px">
+      <div class="span9" style="height:925px;background-color:#FFF;margin-top:20px;margin-left:5px;width:735px">
 
         <div class="span9" style="margin-left:0;margin-top:0;background-color:#66669A;height:auto;width:735px">
           <div style="margin-left:5px">
-            <span style="font-family:'Open Sans';font-size:20px;color:#fff"> <?php foreach($art as $row) 
+            <span style="font-family:'calibri';font-size:20px;color:#fff"> <?php foreach($art as $row) 
 		echo $row->question ?>
 		</span>
           </div>
 
           <div class="span2" style="margin-left:0;margin-top:10px;">
-            <span style="font-family:'Open Sans';font-size:12px;color:#fff;margin-left:10px;">12 hrs ago</span>
+            <span style="font-family:'calibri';font-size:12px;color:#fff;margin-left:10px;">12 hrs ago</span>
            
           </div>
            <div class="span1" style="height:20px;background-color:#1BBC9B;margin-left:-60px;margin-top:10px;"></div>
 
           <div class="span2" style="margin-left:0;margin-top:10px;">
-            <span style="font-family:'Open Sans';font-size:14px;color:#fff;margin-left:10px;">by <?php foreach($art as $row) 
+            <span style="font-family:'calibri';font-size:14px;color:#fff;margin-left:10px;">by <?php foreach($art as $row) 
 		echo $row->posted_by ?>
 	</span>
            
@@ -147,26 +225,26 @@ $(document).ready(function(e) {
 		<?php $i=0;
 		foreach($com as $row)
 			$i++; ?>
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'Open Sans';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'Open Sans';color:#669ACC"><?php echo $i ?> Answers</span>
+              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
+              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC"><?php echo $i ?> Answers</span>
 
            </div>
 
            <div class="span2" style="height:25px;background-color:#1ABC9C;margin-top:8px;">
-              <span style="font-family:'Open Sans';font-size:14px;color:#fff;margin-left:15px;line-height:25px;">Follow Question</span>
+              <span style="font-family:'calibri';font-size:14px;color:#fff;margin-left:15px;line-height:25px;">Follow Question</span>
            </div>
 
         </div>
 
         <div class="span2" style="margin-left:280px;">
-            <span style="font-family:'Open Sans';font-size:20px;color:#CE6A6B;margin-left:15px;line-height:25px;">Answers</span>
+            <span style="font-family:'calibri';font-size:20px;color:#CE6A6B;margin-left:15px;line-height:25px;">Answers</span>
         </div>
 
         <div class="span9" style="margin-left:0;margin-top:0;background-color:#FFF;height:40px;width:735px;margin-top:40px;">
             <div class="span9" style="width:640px;margin-left:0;height:40px;">
                  <input type="text" id="answer" placeholder="Enter your answers here..." style="border-radius:0;height:20px;width:700px;border:1px solid #000;"/>
             </div>
-            <div class="span9" style="width:90px;background-color:#669ACC;margin-left:-5px;height:43px;">
+            <div class="span9" style="width:90px;background-color:#669ACC;margin-left:-5px;height:39px;">
                <a href="#" style="text-decoration:none"><span id="post_answer" style=font-family:Calibri;font-size:30px;font-weight:bold;color:#fff;margin-left:10px;>SEND</span></a>
             </div>
 		<div class="span1" style="height:10px;">
@@ -174,7 +252,7 @@ $(document).ready(function(e) {
         	</div>
         </div>
 
-        <div id="answerBlock" class="span9" style="margin-left:0px;background-color:#FFF;height:480px;width:725px;margin-top:65px;overflow-y:scroll;overflow-x:hidden">
+        <div id="answerBlock" class="span9" style="margin-left:0px;background-color:#FFF;height:700px;width:725px;margin-top:65px;overflow-y:scroll;overflow-x:hidden">
          <div class="span9" style="margin-left:0;margin-top:0;background-color:#FFF;height:40px;width:735px;margin-top:20px;">
             <!--div for answers..it will repeat--don't forget to alternate css>-->
 		<?php foreach($com as $row) { ?>
@@ -189,8 +267,8 @@ $(document).ready(function(e) {
 		<span style="margin-left:10px;"><?php echo $row->answer ?> </span>
                   </div>
                   <div class="span7" style="height:20px;margin-left:0px;width:580px;">
-                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629">29 Votes</span>
-                      <span style="font-family:'Open Sans';font-size:14px;color:#D0757629;margin-left:100px">10 min ago</span>
+                      <span style="font-family:'calibri';font-size:14px;color:#D0757629">29 Votes</span>
+                      <span style="font-family:'calibri';font-size:14px;color:#D0757629;margin-left:100px">10 min ago</span>
                   </div>
               </div>
 		<div class="span6" style="margin-left:0;margin-top:0px;background-color:#FFF;height:40px;width:700px;margin-top:20px;">
@@ -200,34 +278,60 @@ $(document).ready(function(e) {
 </div>
       </div> 
 	</div>
-      <div class="span1" style="height:250px;background-color:#E2E3DD;margin-top:20px;width:75px;margin-left:10px;">
-          <img src="<?php echo base_url()?>Assets/images/writepost.png" />
-          <img src="<?php echo base_url()?>Assets/images/addtopic.png" style="margin-top:-15px;"/>
-          <img src="<?php echo base_url()?>Assets/images/addevent.png" style="margin-top:-15px;"/>
-          <img src="<?php echo base_url()?>Assets/images/askquestion.png" style="margin-top:-15px;"/>
+      <!-- div for right side dock and navigation-->
+            <div class="span1" style="height:250px;background-color:#E2E3DD;margin-top:20px;width:75px;margin-left:5px">
+         	<img src="<?php echo base_url()?>Assets/images/writepost.png" />
+                <img src="<?php echo base_url()?>Assets/images/addtopic.png" style="margin-top:-15px;"/>
+                <img src="<?php echo base_url()?>Assets/images/addevent.png" style="margin-top:-15px;"/>
+                <img src="<?php echo base_url()?>Assets/images/askquestion.png" style="margin-top:-15px;"/>
 
-      </div>
-
-      <div class="span1" style="height:300px;background-color:#E2E3DD;margin-top:290px;width:75px;margin-left:-70px;margin-bottom:10px;">
-          <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                  <img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
-          </div>
-          <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                  <img src="<?php echo base_url()?>Assets/images/Activities_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
-          </div>
-          <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                  <img src="<?php echo base_url()?>Assets/images/Placement_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
-          </div>
+         </div>
+        <!-- div for widjets-->
+          <div class="span1" style="height:670px;background-color:#E2E3DD;width:75px;margin-top:275px;margin-left:-75px;">
+         	<div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                	<img src="<?php echo base_url()?>Assets/images/Academics_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                </div>
+                 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/Activities_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+                  <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/Placement_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
                  
-          <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                  <img src="<?php echo base_url()?>Assets/images/Training_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
-          </div>
+                   <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/Training_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
                  
-          <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
-                  <img src="<?php echo base_url()?>Assets/images/lostandfound_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
-          </div>
+                 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/lostandfound_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/Blindchat_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/calendar_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/confessions_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/compliments_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/complaints_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
+				 
+				 <div class="span1" style="height:50px;background-color:#13C299;margin-left:8px;margin-top:10px;border-radius:5px;">
+                 	<img src="<?php echo base_url()?>Assets/images/outsidecampus_dock.png" style="height:42px;width:45px;margin-top:5px;margin-left:5px;" />
+                 </div>
 
-     </div>
+         </div>
+         </div>
     <script src="<?php echo base_url(); ?>Assets/js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/jquery.dropkick-1.0.0.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/custom_checkbox_and_radio.js"></script>

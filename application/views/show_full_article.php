@@ -186,8 +186,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -199,8 +199,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -212,8 +212,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -225,8 +225,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -238,8 +238,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -251,8 +251,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -264,8 +264,8 @@ $(document).ready(function(e) {
            </div>
 
            <div class="span3" style="margin-left:0px;margin-top:30px;">
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC">34 answers</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#66669A">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#cd6667">34 comments</span>
 
            </div>
 
@@ -300,8 +300,8 @@ $(document).ready(function(e) {
 		<?php $i=0;
 		foreach($com as $row)
 			$i++; ?>
-              <img src="<?php echo base_url()?>Assets/images/following.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#1BBC9B">69 Following</span>
-              <img src="<?php echo base_url()?>Assets/images/answer.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#669ACC"><?php echo $i ?> comments</span>
+              <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#ffffff">69 Votes</span>
+              <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:12px;height:12px;margin-top:-1px;margin-right:4px;margin-left:8px;"/><span style="line-height:10px;font-size:13px;font-family:'calibri';color:#ffffff"><?php echo $i ?> comments</span>
 
            </div>
 	<!-- in next pahse-
