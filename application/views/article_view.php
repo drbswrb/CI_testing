@@ -370,10 +370,10 @@ echo $n ?> Questions </span>
 				<span style="font-family:Calibri, 'Californian FB';font-size:16px;color:#333;margin-left:30px;">
 
                         <?php $var= $row->article_content;  
-				if(strlen($var)>=100)
+				if(strlen($var)>=80)
 				{
 
-					$len=100;
+					$len=80;
 					
 
 					for( $i=0;$i<=$len;$i++)
@@ -398,7 +398,7 @@ echo $n ?> Questions </span>
                                 <span style="font-family:'Segoe UI';font-size:14px;color:#8C8C8C;margin-left:30px;line-height:50px;">By: <?php echo $row->posted_by ?> </span>
 				<span  style="text-decoration:none;margin-left:80px;color:#960;"><a href="<?php echo base_url();?>index.php/get_full_article/index/<?php echo $row->article_id ?>" style="text-decoration:none;">Read  More</a></span>
 
-                                <img src="<?php echo base_url()?>Assets/images/vote.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
+                                <img src="<?php echo base_url()?>Assets/images/votes.png" style="width:14px; height:14px;margin-left:150px;margin-top:-5px;"/>
                                 <span style="font-family:'Segoe UI';font-size:14px;color:#66669A"><?php echo $row->likes; ?> Likes</span>
                                  <img src="<?php echo base_url()?>Assets/images/comments.png" style="width:14px; height:14px;margin-left:100px;margin-top:-5px;"/>
                                 <span style="font-family:'Segoe UI';font-size:14px;color:#CD6869"><?php $query=mysql_query("select * from comment_article where article_id=$row->article_id");

@@ -7,7 +7,9 @@ class Get_full_question extends CI_Controller
 		$this->load->helper('url');		
 		$this->load->library('session');
 		$this->load->model('md_load_questions');
-		 
+		
+		$que = $this->md_load_questions->getQuestions();
+		$data['que'] = $que;
 		$dataQuestion=$this->md_load_questions->getDetailQuestion($question_id);
 		$data['art']=$dataQuestion;
 		$dataComment=$this->md_load_questions->getAnswer($question_id);
